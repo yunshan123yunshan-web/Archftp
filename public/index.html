@@ -147,6 +147,8 @@ ul.hl li::before{content:'→';color:var(--accent);flex-shrink:0;font-family:'DM
   <div class="sb-group">Appendix</div>
   <div class="sb-item" onclick="go(18)" id="n18"><span class="sbn">A</span>Prompt Patterns</div>
   <div class="sb-item" onclick="go(19)" id="n19"><span class="sbn">B</span>Practice &amp; Quick Ref</div>
+  <div class="sb-group">TL;DR</div>
+  <div class="sb-item" onclick="go(20)" id="n20"><span class="sbn">C</span>TL;DR &amp; Takeaways</div>
 </nav>
 <main class="content-area" id="ca">
 
@@ -1833,14 +1835,81 @@ If too generic: Add your context files to the prompt.</div>
   <div class="focus" style="margin-top:16px">The tools will evolve. The skill of working with AI, context, clarity, judgment, will only become more valuable.</div>
 </div>
 
-<div class="navbtn"><button class="btn btn-s" onclick="go(18)">← Back</button><button class="btn btn-g" onclick="go(0)">↩ Start from beginning</button></div>
+<div class="navbtn"><button class="btn btn-s" onclick="go(18)">← Back</button><button class="btn btn-p" onclick="go(20)">TL;DR: Takeaways →</button></div>
+</section>
+
+<!-- ========== TL;DR: ACTIONABLE TAKEAWAYS ========== -->
+<section class="section" id="s20">
+<span class="section-tag"><span class="tag-num">C</span> TL;DR · Takeaways</span>
+<h1>TL;DR: <span class="a3">Just Tell Me What to Do</span></h1>
+<p class="lead">You don't need to remember everything. These 6 actions, in priority order, will get you 90% of the value.</p>
+
+<div class="card-grid">
+  <div class="card" style="border-left:3px solid var(--accent)">
+    <div class="card-title"><span style="background:var(--accent);color:var(--bg);border-radius:50%;width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;">1</span> Create your project folder</div>
+    <p>5 minutes. <strong>Claude Cowork/</strong> with <strong>ABOUT ME/</strong>, <strong>OUTPUTS/</strong>, <strong>TEMPLATES/</strong>. This is the foundation. Without it, every session starts from zero.</p>
+    <p style="margin-top:6px;font-size:12px;color:var(--accent3)">→ Do this first, before anything else</p>
+  </div>
+  <div class="card" style="border-left:3px solid var(--accent2)">
+    <div class="card-title"><span style="background:var(--accent2);color:var(--bg);border-radius:50%;width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;">2</span> Write about-me.md + claude.md</div>
+    <p>Use the interview prompt in this training. Tell Claude who you are, how you work, and what you expect. Write once, use forever. This is what makes output sound like you.</p>
+    <p style="margin-top:6px;font-size:12px;color:var(--accent3)">→ Create both files this week</p>
+  </div>
+  <div class="card" style="border-left:3px solid var(--accent3)">
+    <div class="card-title"><span style="background:var(--accent3);color:var(--bg);border-radius:50%;width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;">3</span> Use the 6-part prompt</div>
+    <p><strong>Role</strong> · <strong>Context</strong> · <strong>Task</strong> · <strong>Constraints</strong> · <strong>Format</strong> · <strong>Verify</strong>. At minimum: Context + Task + Format. The 30 seconds you spend setting context saves 30 minutes of editing.</p>
+    <p style="margin-top:6px;font-size:12px;color:var(--accent3)">→ Bookmark the prompt framework (section A-18)</p>
+  </div>
+  <div class="card" style="border-left:3px solid var(--accent4)">
+    <div class="card-title"><span style="background:var(--accent4);color:var(--bg);border-radius:50%;width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;">4</span> Verify before you ship</div>
+    <p>Two-pass reading: facts first, tone second. Assume Claude is confidently wrong until you prove otherwise. Never send AI output without review. Ever.</p>
+    <p style="margin-top:6px;font-size:12px;color:var(--accent3)">→ Use the verification checklist (section 8-03)</p>
+  </div>
+  <div class="card" style="border-left:3px solid var(--accent)">
+    <div class="card-title"><span style="background:var(--accent);color:var(--bg);border-radius:50%;width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;">5</span> Iterate 2-3 rounds</div>
+    <p>First draft is never final. Tell Claude what to fix — don't rewrite it yourself. 2-3 rounds of refinement is normal, not failure. Quality is in the iteration.</p>
+    <p style="margin-top:6px;font-size:12px;color:var(--accent3)">→ Expect refinement, budget for it</p>
+  </div>
+  <div class="card" style="border-left:3px solid var(--accent2)">
+    <div class="card-title"><span style="background:var(--accent2);color:var(--bg);border-radius:50%;width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;">6</span> Start fresh when context shifts</div>
+    <p>New task = new conversation. Different client = different conversation. When responses get worse, you've filled the context window. Start fresh and bring key context forward.</p>
+    <p style="margin-top:6px;font-size:12px;color:var(--accent3)">→ Fresh conversations are not failure</p>
+  </div>
+</div>
+
+<div class="hero-box">
+  <h2 style="margin-top:0">The One Rule That Trumps Everything</h2>
+  <p style="font-size:15px;color:var(--text);margin:10px 0;"><strong>Claude drafts. You decide.</strong></p>
+  <p>AI removes the friction of getting words on the page. It does not remove the responsibility of deciding whether those words are right. Your judgment is the bottleneck — not the speed of generation.</p>
+  <div class="cmp" style="margin-top:14px">
+    <div class="ccard bad">
+      <div class="clabel">❌ Low-value use</div>
+      <ul class="hl"><li>One-shot prompts, no context, accept first output</li><li>Copy/paste between tools</li><li>Treat Claude like a search engine</li></ul>
+    </div>
+    <div class="ccard good">
+      <div class="clabel">✓ High-value use</div>
+      <ul class="hl"><li>Rich context + verification + iteration</li><li>Work in Cowork Mode with project folder</li><li>Treat Claude like a collaborator</li></ul>
+    </div>
+  </div>
+</div>
+
+<div class="outcome-grid">
+  <div class="oc"><span class="oc-ico">⏱️</span><div class="oc-title">Week 1</div><div class="oc-desc">Create folder + context files. One real task per day in Cowork.</div></div>
+  <div class="oc"><span class="oc-ico">📈</span><div class="oc-title">Week 2</div><div class="oc-desc">Build 2-3 prompt templates in TEMPLATES/. Add rules as mistakes happen.</div></div>
+  <div class="oc"><span class="oc-ico">🔁</span><div class="oc-title">Month 1</div><div class="oc-desc">Review context files. Remove stale rules. Share a template with a teammate.</div></div>
+  <div class="oc"><span class="oc-ico">🧠</span><div class="oc-title">Ongoing</div><div class="oc-desc">Every time Claude gets it wrong, fix the prompt or add a rule. Compound.</div></div>
+</div>
+
+<div class="focus">You now know more about using AI effectively than most daily users. The gap between knowing and doing is one folder, one file, one prompt. Start today.</div>
+
+<div class="navbtn"><button class="btn btn-s" onclick="go(19)">← Back</button><button class="btn btn-g" onclick="go(0)">↩ Start from beginning</button></div>
 </section>
 
 </main>
 </div>
 
 <script>
-let cur=0;const total=20;
+let cur=0;const total=21;
 function go(i){
   document.getElementById('s'+cur).classList.remove('active');
   const pn=document.getElementById('n'+cur);
@@ -1852,7 +1921,7 @@ function go(i){
   const ne=document.getElementById('n'+cur);
   ne.classList.add('active');ne.classList.remove('done');
   const as=ne.querySelector('.sbn');
-  if(as&&as.textContent==='✓'){const lb=['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','A','B'];as.textContent=lb[cur];}
+  if(as&&as.textContent==='✓'){const lb=['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','A','B','C'];as.textContent=lb[cur];}
   const pct=Math.round((cur/(total-1))*100);
   document.getElementById('pf').style.width=pct+'%';
   document.getElementById('pt').textContent=(cur+1)+' / '+total;
