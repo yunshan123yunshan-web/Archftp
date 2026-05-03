@@ -1,0 +1,1077 @@
+<header class="site-header">
+  <div class="logo"><span class="logo-dot"></span>Claude Team Training</div>
+  <div class="progress-bar"><div class="progress-fill" id="pf"></div></div>
+  <div class="progress-text" id="pt">1 / 11</div>
+</header>
+<div class="main-layout">
+<nav class="sidebar" id="sidebar">
+  <div class="sb-group">Foundations</div>
+  <div class="sb-item active" onclick="go(0)" id="n0"><span class="sbn">1</span>Opening &amp; Foundations</div>
+  <div class="sb-item" onclick="go(1)" id="n1"><span class="sbn">2</span>Claude &amp; The Landscape</div>
+  <div class="sb-item" onclick="go(2)" id="n2"><span class="sbn">3</span>Prompting</div>
+  <div class="sb-group">Setup</div>
+  <div class="sb-item" onclick="go(3)" id="n3"><span class="sbn">4</span>Your Project Folder</div>
+  <div class="sb-item" onclick="go(4)" id="n4"><span class="sbn">5</span>Context Files</div>
+  <div class="sb-item" onclick="go(5)" id="n5"><span class="sbn">6</span>Cowork Mode</div>
+  <div class="sb-group">Going Further</div>
+  <div class="sb-item" onclick="go(6)" id="n6"><span class="sbn">7</span>Building the Habit</div>
+  <div class="sb-item" onclick="go(7)" id="n7"><span class="sbn">8</span>Trust &amp; Judgment</div>
+  <div class="sb-item" onclick="go(8)" id="n8"><span class="sbn">9</span>Closing &amp; Next Steps</div>
+  <div class="sb-group">Appendix</div>
+  <div class="sb-item" onclick="go(9)" id="n9"><span class="sbn">A</span>Prompt Patterns</div>
+  <div class="sb-item" onclick="go(10)" id="n10"><span class="sbn">B</span>Practice &amp; Quick Ref</div>
+</nav>
+<main class="content-area" id="ca">
+
+<!-- ========== SECTION 0: OPENING & FOUNDATIONS (10 slides) ========== -->
+<section class="section active" id="s0">
+<span class="section-tag"><span class="tag-num">1</span> Opening &amp; Foundations · 10 slides</span>
+<h1>The Way You Work<br>Is About to <span class="a1">Change</span></h1>
+<p class="lead">This isn't a technical training. You don't need to know how to code. You just need to know how to delegate.</p>
+
+<h2>01-02 · Old Paradigm vs. New Reality</h2>
+<div class="cmp">
+  <div class="ccard bad">
+    <div class="clabel">❌ The Old Way</div>
+    <ul class="hl"><li>Treat AI like a search engine — ask once, move on</li><li>Zero context provided</li><li>Treats AI as "magic answer box"</li><li>One-shot prompts, no iteration</li><li>No follow-through or verification</li><li>Starts fresh every single time</li></ul>
+  </div>
+  <div class="ccard good">
+    <div class="clabel">✓ The New Paradigm</div>
+    <ul class="hl"><li>Delegate like a teammate — set context, iterate, verify</li><li>Rich context and examples upfront</li><li>Treats AI as a skilled collaborator</li><li>Iterative refinement loop</li><li>Verify and validate all outputs</li><li>Builds on shared understanding</li></ul>
+  </div>
+</div>
+<div class="focus">The shift: from asking questions → delegating outcomes</div>
+
+<h2>01-03 · What AI Actually Is (And Isn't)</h2>
+<p>Let's clear up what we're working with. AI is not magic, not alive, not conscious. It's a pattern-matching engine.</p>
+<div class="cmp">
+  <div class="ccard" style="border-color:var(--border)">
+    <div class="clabel" style="color:#ef4444">What AI is NOT</div>
+    <ul class="hl"><li>Not conscious or sentient</li><li>Not a person with opinions</li><li>Not a search engine (it doesn't "know" things)</li><li>Not always right — confident ≠ correct</li><li>Not reading your mind</li></ul>
+  </div>
+  <div class="ccard" style="border-color:var(--border)">
+    <div class="clabel" style="color:var(--accent3)">What AI IS</div>
+    <ul class="hl"><li>A pattern-recognition engine trained on text</li><li>Extremely good at predicting what words come next</li><li>A reasoning tool that can follow instructions</li><li>A tireless assistant that never gets bored</li><li>Gets dramatically better with clear input</li></ul>
+  </div>
+</div>
+<div class="focus">Think of AI as a brilliant intern who needs clear instructions, context, and supervision — not a psychic who knows what you want.</div>
+
+<h2>01-04 · How We Get From "Patterns" to "Useful"</h2>
+<div class="steps">
+  <div class="si"><div class="snum">1</div><div class="sc"><h4>Training</h4><p>AI read billions of pages of text to learn language patterns.</p></div></div>
+  <div class="si"><div class="snum">2</div><div class="sc"><h4>Patterns</h4><p>It learned what language looks like — structure, logic, tone, meaning.</p></div></div>
+  <div class="si"><div class="snum">3</div><div class="sc"><h4>Instructions (your prompt)</h4><p>You tell it what to do, in what role, with what context.</p></div></div>
+  <div class="si"><div class="snum">4</div><div class="sc"><h4>Context</h4><p>You give it background, examples, constraints.</p></div></div>
+  <div class="si"><div class="snum">5</div><div class="sc"><h4>Output</h4><p>Claude generates a response based on everything above.</p></div></div>
+  <div class="si"><div class="snum">6</div><div class="sc"><h4>Your Judgment</h4><p>You decide if it's good. This step is non-negotiable — always.</p></div></div>
+</div>
+<div class="focus">The quality of what you get out depends entirely on what you put in. Good context gives you gold. Vague input gives you generic.</div>
+
+<h2>01-05 · Tokens: How AI Reads Your Words</h2>
+<p>AI doesn't read words like we do. It reads in "tokens" — chunks of text about ¾ of a word long.</p>
+<div class="card-grid">
+  <div class="card"><div class="card-title">~¾ of a word</div><p>1 token ≈ ¾ of a word in English. "Hello" = 1 token. "Collaboration" = 2–3 tokens.</p></div>
+  <div class="card"><div class="card-title">200,000 tokens</div><p>Claude can hold ~200K tokens in memory at once — roughly a 300-page book.</p></div>
+  <div class="card"><div class="card-title">The limit matters</div><p>When the limit fills, Claude forgets the oldest context first. This is why long chats degrade.</p></div>
+  <div class="card"><div class="card-title">Different languages</div><p>Non-English text uses more tokens per word. Plan accordingly if working multilingually.</p></div>
+</div>
+
+<h2>01-06 · The Context Window: How AI Remembers</h2>
+<div class="callout info"><span class="callout-ico">📋</span><div class="callout-body"><strong>Analogy:</strong> Imagine a whiteboard. Everything you write stays there until you erase it. Claude's whiteboard holds ~200,000 tokens — roughly a 300-page book. Everything in the current conversation goes on the whiteboard. When you start a new conversation, you get a fresh whiteboard. Old conversations are NOT remembered unless you bring the info forward.</div></div>
+<div class="focus">The context window is your shared workspace. The more relevant information you put in it, the better Claude's output will be.</div>
+
+<h2>01-07 · The Beginner Trap: Why Conversations Break</h2>
+<div class="scenario"><div class="scenario-label">The Trap</div><p>You ask Claude something → It works great → You ask something else → Works less well → You add more instructions → Context window fills up → Claude "forgets" the beginning → "Why is it getting <em>worse</em>?"</p></div>
+<div class="callout tip"><span class="callout-ico">💡</span><div class="callout-body"><strong>The solution:</strong><br>• Long conversation? Start a fresh one with ALL the context re-pasted<br>• Different task? Start fresh. Don't pile onto old conversations.<br>• Complex task? Break it into smaller conversations.</div></div>
+
+<h2>01-08 · The 4-Step Delegation Flow</h2>
+<div class="steps">
+  <div class="si"><div class="snum">1</div><div class="sc"><h4>Give context</h4><p>Background, audience, goal, constraints — before anything else.</p></div></div>
+  <div class="si"><div class="snum">2</div><div class="sc"><h4>Set expectations</h4><p>Tone, format, length, what success looks like.</p></div></div>
+  <div class="si"><div class="snum">3</div><div class="sc"><h4>Define the task</h4><p>Clear, specific instructions — not vague requests.</p></div></div>
+  <div class="si"><div class="snum">4</div><div class="sc"><h4>Iterate &amp; verify</h4><p>Review, refine, check for correctness. First draft = starting point, never final.</p></div></div>
+</div>
+<div class="focus">Delegating to AI is like delegating to a capable teammate. The more context and clarity you provide upfront, the less rework you'll do.</div>
+
+<h2>01-09 · Key Terms Glossary</h2>
+<table class="dt">
+  <thead><tr><th>Term</th><th>What it means</th></tr></thead>
+  <tbody>
+    <tr><td><strong>AI</strong></td><td>Computers performing tasks that normally require human intelligence</td></tr>
+    <tr><td><strong>LLM</strong></td><td>Large Language Model — trained on massive text to understand and generate language</td></tr>
+    <tr><td><strong>Token</strong></td><td>~¾ of a word — the unit AI reads and writes in</td></tr>
+    <tr><td><strong>Context Window</strong></td><td>How much text AI can "see" at once (Claude: ~200K tokens)</td></tr>
+    <tr><td><strong>Prompt</strong></td><td>Your instruction to the AI</td></tr>
+    <tr><td><strong>Output</strong></td><td>What the AI generates in response</td></tr>
+    <tr><td><strong>Hallucination</strong></td><td>When AI confidently states something incorrect</td></tr>
+    <tr><td><strong>Model</strong></td><td>A specific version of AI (Haiku, Sonnet, Opus)</td></tr>
+    <tr><td><strong>Training</strong></td><td>The process of teaching AI from data</td></tr>
+    <tr><td><strong>Fine-tuning</strong></td><td>Specializing a model for specific tasks</td></tr>
+  </tbody>
+</table>
+
+<h2>01-10 · Exercise: Reflect on Your Current Use</h2>
+<div class="callout info"><span class="callout-ico">✏️</span><div class="callout-body"><strong>Part 1 — Think (2 min):</strong> How do you currently use AI? Do you ask single questions and move on? Give context? Iterate?<br><br><strong>Part 2 — Write (3 min):</strong> Write one task you do regularly that you'd like AI to help with more effectively.<br><br><strong>Part 3 — Share (optional):</strong> What's one way your current use could improve with the "delegation" mindset?</div></div>
+
+<div class="navbtn"><span></span><button class="btn btn-p" onclick="go(1)">Next: Claude &amp; The Landscape →</button></div>
+</section>
+
+<!-- ========== SECTION 1: CLAUDE & LANDSCAPE (7 slides) ========== -->
+<section class="section" id="s1">
+<span class="section-tag"><span class="tag-num">2</span> Claude &amp; The Landscape · 7 slides</span>
+<h1>Meet Your<br><span class="a2">New Teammate</span></h1>
+<p class="lead">Claude is not just a chatbot. In 2026, it's six tools. Most people only use one of them.</p>
+
+<h2>02-02 · What Is Claude?</h2>
+<p>Claude is an AI assistant created by Anthropic — a company founded by former OpenAI researchers. Built for collaboration, not just chat.</p>
+<div class="card-grid">
+  <div class="card"><div class="card-title"><div class="ci" style="background:rgba(91,143,255,.15)">📄</div>200K context</div><p>Processes entire documents, books, months of email threads without losing track.</p></div>
+  <div class="card"><div class="card-title"><div class="ci" style="background:rgba(52,211,153,.15)">🎯</div>Instruction-following</div><p>Purpose-built to follow detailed, complex instructions precisely. Excels at nuanced tasks.</p></div>
+  <div class="card"><div class="card-title"><div class="ci" style="background:rgba(167,139,250,.15)">🖥️</div>File-aware</div><p>Desktop Cowork app reads your actual folder — not just text you paste in.</p></div>
+  <div class="card"><div class="card-title"><div class="ci" style="background:rgba(251,146,60,.15)">🛡️</div>Constitutional AI</div><p>Built-in safety guidelines. Designed to push back on problematic requests.</p></div>
+</div>
+<div class="focus">We use Claude because it excels at long context, nuanced judgment, and following detailed instructions.</div>
+
+<h2>02-03 · Claude vs ChatGPT: The Honest Comparison</h2>
+<div class="cmp">
+  <div class="ccard" style="border-color:rgba(91,143,255,.3)">
+    <div class="clabel" style="color:var(--accent)">Claude wins at</div>
+    <ul class="hl"><li>Larger context window (200K vs 128K tokens)</li><li>Following complex, detailed instructions</li><li>Nuanced analysis and reasoning</li><li>Writing that sounds human, not generic</li><li>File work via Cowork</li><li>Constitutional AI safety approach</li></ul>
+  </div>
+  <div class="ccard" style="border-color:rgba(255,255,255,.1)">
+    <div class="clabel" style="color:var(--text-dim)">ChatGPT wins at</div>
+    <ul class="hl"><li>Voice mode (much stronger)</li><li>Image generation (Claude can't)</li><li>Creative brainstorming and writing</li><li>More third-party integrations</li><li>Better multimodal (DALL-E)</li><li>Broader plugin ecosystem</li></ul>
+  </div>
+</div>
+<div class="callout tip"><span class="callout-ico">💡</span><div class="callout-body">Neither is "better" — they excel at different things. Most power users use both. What matters more than which model you pick is how much context and clarity you provide.</div></div>
+
+<h2>02-04 · Three Ways to Use Claude</h2>
+<div class="card-grid">
+  <div class="card" style="border-color:rgba(91,143,255,.3)">
+    <div class="card-title"><div class="ci" style="background:rgba(91,143,255,.15)">💬</div>Chat (claude.ai)<span class="badge new">Start here</span></div>
+    <p>Browser-based. Best for quick drafts, questions, brainstorming, research. No setup required. Use it like texting a smart colleague.</p>
+  </div>
+  <div class="card" style="border-color:rgba(52,211,153,.3)">
+    <div class="card-title"><div class="ci" style="background:rgba(52,211,153,.15)">🖥️</div>Cowork Mode<span class="badge key">Key feature</span></div>
+    <p>Desktop app. Works in your actual project folder. Can read, write, and edit files. This is where the biggest productivity jump happens.</p>
+  </div>
+  <div class="card">
+    <div class="card-title"><div class="ci" style="background:rgba(167,139,250,.15)">⌨️</div>Claude Code (Terminal)</div>
+    <p>Advanced: runs in terminal, can execute commands, manage complex projects. Not needed to start — we'll skip for now.</p>
+  </div>
+</div>
+<div class="focus">We'll focus on Chat and Cowork Mode. These two cover 95% of what you'll need day to day.</div>
+
+<h2>02-05 · What You Can Actually Do</h2>
+<div class="cmp">
+  <div class="ccard" style="border-color:var(--border)">
+    <div class="clabel" style="color:var(--accent)">Writing &amp; Communication</div>
+    <ul class="hl"><li>Draft and refine emails</li><li>Write and edit proposals</li><li>Summarize meetings and documents</li><li>Create reports and content</li><li>Rewrite for different audiences</li><li>Proofread and check tone</li></ul>
+  </div>
+  <div class="ccard" style="border-color:var(--border)">
+    <div class="clabel" style="color:var(--accent2)">Analysis &amp; Research</div>
+    <ul class="hl"><li>Analyze data and find patterns</li><li>Research topics and summarize findings</li><li>Compare options and recommend</li><li>Review documents for gaps</li><li>Extract key info from long texts</li><li>Brainstorm and plan projects</li></ul>
+  </div>
+</div>
+<div class="focus">If you spend time reading, writing, or thinking at work — Claude can save you significant time.</div>
+
+<h2>02-06 · Our Recurring Example: Meeting → Email</h2>
+<p>We'll use this scenario throughout the entire training to see how each skill applies:</p>
+<div class="hero-box">
+  <p><strong>The scenario:</strong> You just attended a 45-minute client meeting. Now you need to: (1) write a meeting summary, (2) draft a follow-up email, (3) create an action item list.</p>
+  <div class="cmp" style="margin-top:14px">
+    <div class="ccard bad"><div class="clabel">Without AI</div><p style="font-size:13px">30–45 minutes of writing, checking, and formatting — from scratch, every time.</p></div>
+    <div class="ccard good"><div class="clabel">With AI (done well)</div><p style="font-size:13px">5–10 minutes of directing, reviewing, and refining — using context you already have.</p></div>
+  </div>
+</div>
+
+<h2>02-07 · Exercise: What Would You Use Claude For?</h2>
+<div class="callout info"><span class="callout-ico">✏️</span><div class="callout-body"><strong>Part 1 (3 min):</strong> Look at your calendar from last week. Pick 3 tasks you spent time on — writing, summarizing, researching, planning. Write down how you might use Claude for each one.<br><br><strong>Part 2 (2 min):</strong> Share one idea with the group. What task would save you the most time?<br><br><strong>Check-in:</strong> Has anything surprised you so far? What's still unclear?</div></div>
+
+<div class="navbtn"><button class="btn btn-s" onclick="go(0)">← Back</button><button class="btn btn-p" onclick="go(2)">Next: Prompting →</button></div>
+</section>
+
+<!-- ========== SECTION 2: PROMPTING (10 slides) ========== -->
+<section class="section" id="s2">
+<span class="section-tag"><span class="tag-num">3</span> Prompting · 10 slides</span>
+<h1>How to Talk to Claude<br>So It <span class="a3">Actually Works</span></h1>
+<p class="lead">Prompting is not about finding "magic words." It's about clearly communicating what you need to a capable teammate.</p>
+
+<h2>03-02 · Delegation, Not Magic</h2>
+<p>If you asked a new team member to write a client email, you'd tell them: who the client is and what they care about, what the email should accomplish, what tone to use, what to include and avoid. <strong>The same rules apply to prompting AI.</strong></p>
+<div class="focus">Prompting is a conversation skill, not a technical skill. If you can explain a task to a colleague, you can prompt Claude.</div>
+
+<h2>03-03 · The 6-Part Prompt Framework</h2>
+<div class="card-grid">
+  <div class="card" style="border-left:3px solid var(--accent)"><div class="card-title">1. Role</div><p>"You are a senior copywriter..." — gives Claude an expertise lens. Fundamentally changes the output quality.</p></div>
+  <div class="card" style="border-left:3px solid var(--accent2)"><div class="card-title">2. Context</div><p>Background, audience, situation. Claude has no idea who you are. Your job: set the scene.</p></div>
+  <div class="card" style="border-left:3px solid var(--accent3)"><div class="card-title">3. Task</div><p>What exactly should it do? Be specific. "Make it better" tells Claude nothing.</p></div>
+  <div class="card" style="border-left:3px solid var(--accent4)"><div class="card-title">4. Constraints</div><p>Length, tone, what to avoid. Set the bounds so Claude doesn't overshoot.</p></div>
+  <div class="card" style="border-left:3px solid var(--accent)"><div class="card-title">5. Output Format</div><p>Email? Bullet points? Table? Memo? Specify it or Claude will choose for you.</p></div>
+  <div class="card" style="border-left:3px solid var(--accent2)"><div class="card-title">6. Verification</div><p>"Flag anything that sounds like a promise we haven't approved." Tell it how to check its own work.</p></div>
+</div>
+<p style="font-size:12.5px;color:var(--text-dim)">Not every prompt needs all 6 — but the more you include, the better the result. Aim for at least 3–4.</p>
+
+<h2>03-04 · Rule 1: Give Context (The Most Important Rule)</h2>
+<p>Why it matters: Claude has no idea who you are, who you're writing to, or what's happened before. Your job is to set the scene.</p>
+<div class="cmp">
+  <div class="ccard bad">
+    <div class="clabel">❌ Weak — no context</div>
+    <div class="code" style="margin:0;font-size:12px;">"Write an email to a client."</div>
+    <p style="margin-top:8px;font-size:12px;">Claude guesses the client, purpose, and tone. Almost always generic and wrong.</p>
+  </div>
+  <div class="ccard good">
+    <div class="clabel">✓ Strong — rich context</div>
+    <div class="code" style="margin:0;font-size:11px;">"Write an email to Sarah Chen at Acme Corp. We met yesterday to discuss their Q3 website redesign. She expressed concern about timeline. Purpose: reassure her and confirm next steps. Relationship: friendly but professional."</div>
+  </div>
+</div>
+<div class="focus">Context is the difference between "I'm here" vs "I'm at the coffee shop on 3rd Street." Same message — completely different usefulness.</div>
+
+<h2>03-05 · Rule 2: Give Examples</h2>
+<p>Claude learns from patterns. An example is worth 100 words of explanation.</p>
+<div class="cmp">
+  <div class="ccard bad">
+    <div class="clabel">❌ No example</div>
+    <p style="font-size:13px;">"Write a professional bio."<br><br>→ Generic corporate bio that sounds like everyone else.</p>
+  </div>
+  <div class="ccard good">
+    <div class="clabel">✓ With example</div>
+    <p style="font-size:13px;">"Write a professional bio. Here's one I like — notice the tone: [example]. Write mine in the same style."<br><br>→ One example replaces paragraphs of instruction.</p>
+  </div>
+</div>
+<div class="focus">Examples are the fastest way to communicate tone, style, quality, and format. One good example replaces paragraphs of instruction.</div>
+
+<h2>03-06 · Bad Prompt → Good Prompt</h2>
+<div class="cmp">
+  <div class="ccard bad">
+    <div class="clabel">❌ Bad prompt</div>
+    <div class="code" style="margin:0;font-size:12px;">"Write a blog post about AI."</div>
+    <p style="margin-top:8px;font-size:12px;">No audience · No tone · No structure · No examples · No constraints · No format</p>
+  </div>
+  <div class="ccard good">
+    <div class="clabel">✓ Good prompt</div>
+    <div class="code" style="margin:0;font-size:11px;"><span class="kw">Role:</span> Technology writer for B2B audience
+<span class="kw">Context:</span> Readers are ops leaders skeptical about AI
+<span class="kw">Task:</span> 500 words — 3 concrete ways AI saves time in daily ops
+<span class="kw">Tone:</span> Direct, evidence-backed, no hype
+<span class="kw">Format:</span> Headline + 3 sections with bullets. End with 1-sentence takeaway
+<span class="kw">Verify:</span> Flag any overgeneralizations</div>
+  </div>
+</div>
+<div class="focus">The good prompt takes 30 seconds longer to write. It saves 30 minutes of back-and-forth editing.</div>
+
+<h2>03-07 · Let's Build a Prompt Together (Recurring Example)</h2>
+<p>Remember our scenario: meeting recap → follow-up email. Here's a prompt built step by step:</p>
+<div class="code" style="position:relative"><button class="cbtn" onclick="cp(this)">Copy</button><span class="kw">Role:</span> You're a client success manager who attended a 45-min project review with Acme Corp.
+
+<span class="kw">Context:</span> The meeting covered Q3 deliverables, timeline concerns, and budget approval. The client seemed satisfied but wanted clearer milestones.
+
+<span class="kw">Task:</span> Write a meeting summary with key decisions, action items, and a follow-up email to the client.
+
+<span class="kw">Constraints:</span> Keep the summary under 300 words. The email should be warm but professional. Do not assume commitments we haven't discussed.
+
+<span class="kw">Format:</span> Summary first (bullet points), then email draft below.
+
+<span class="kw">Verify:</span> Check that all action items are specific and assigned. Flag anything that sounds like a promise we haven't approved.</div>
+
+<h2>03-08 · Practice: Rewrite a Weak Prompt</h2>
+<div class="scenario"><div class="scenario-label">Exercise</div><p>Here's a weak prompt. Let's improve it together:<br><br><strong>"Write a status update for the project."</strong></p></div>
+<div class="callout info"><span class="callout-ico">✏️</span><div class="callout-body"><strong>Questions to ask yourself:</strong><br>• What's missing? (Context, audience, format, tone)<br>• What would make this specific? (Which project? To whom? How much detail?)<br>• What should it include? (Progress, blockers, next steps?)<br><br>The rewrite should include: Role, Context (what project phase), Task (inform stakeholders or request input?), Format (email, doc, slide), Constraints (length, level of detail).</div></div>
+
+<h2>03-09 · Quick Win: Summarizing With Claude</h2>
+<p>This is one of the easiest ways to start. Paste any text — meeting notes, article, email thread — and use:</p>
+<div class="code" style="position:relative"><button class="cbtn" onclick="cp(this)">Copy</button>Summarize this in 3-5 bullet points. Include key decisions, open questions, and action items.</div>
+<div class="steps">
+  <div class="si"><div class="snum">1</div><div class="sc"><h4>Paste</h4><p>Copy the text (meeting transcript, article, email thread)</p></div></div>
+  <div class="si"><div class="snum">2</div><div class="sc"><h4>Prompt</h4><p>Use the template above, or customize it.</p></div></div>
+  <div class="si"><div class="snum">3</div><div class="sc"><h4>Refine</h4><p>"Shorten to 2 sentences" / "Format as email" / "Translate for a non-technical audience"</p></div></div>
+</div>
+<div class="focus">Summarization is Claude's superpower. The 200K context window means it can handle entire books, legal documents, or months of email threads.</div>
+
+<h2>03-10 · Exercise: Write Your First Real Prompt</h2>
+<div class="callout info"><span class="callout-ico">✏️</span><div class="callout-body"><strong>Part 1 (1 min):</strong> Pick a real task from your work this week — an email, a summary, a draft.<br><br><strong>Part 2 (5 min):</strong> Write a prompt using the 6-part framework: Role, Context, Task, Constraints, Format, Verify.<br><br><strong>Part 3 (optional):</strong> Run your prompt. Review the output. What would you change?<br><br><strong>Check-in:</strong> Which part felt most useful? What was hard about writing the prompt?</div></div>
+
+<div class="navbtn"><button class="btn btn-s" onclick="go(1)">← Back</button><button class="btn btn-p" onclick="go(3)">Next: Your Project Folder →</button></div>
+</section>
+
+<!-- ========== SECTION 3: PROJECT FOLDER (4 slides) ========== -->
+<section class="section" id="s3">
+<span class="section-tag"><span class="tag-num">4</span> Your Project Folder · 4 slides</span>
+<h1>Your <span class="a1">Project Folder</span></h1>
+<p class="lead">5 minutes of setup saves you hours of re-explaining yourself every session. This is the foundation of everything.</p>
+
+<h2>04-02 · Why Work in a Folder?</h2>
+<p>If you use Claude on the website (claude.ai), every conversation starts completely blank. Claude has no idea about your work, your clients, or your context.</p>
+<div class="cmp">
+  <div class="ccard bad">
+    <div class="clabel">Without a folder</div>
+    <ul class="hl"><li>Every conversation starts blank</li><li>Claude has no idea who you are</li><li>You re-explain context every single time</li><li>Nothing is saved or organized</li><li>Like asking a stranger on the street</li></ul>
+  </div>
+  <div class="ccard good">
+    <div class="clabel">With a folder</div>
+    <ul class="hl"><li>Claude reads your files = instant context</li><li>Claude writes and updates files = work saved</li><li>Everything organized, nothing lost</li><li>Context files live here permanently</li><li>Like handing a dossier to a briefed teammate</li></ul>
+  </div>
+</div>
+<div class="focus">The folder is your shared workspace. All your context lives here. Claude reads from it, writes to it, and every conversation builds on what's there.</div>
+
+<h2>04-03 · Setting Up Your Project Folder</h2>
+<div class="steps">
+  <div class="si"><div class="snum">1</div><div class="sc"><h4>Create the main folder</h4><p>On Desktop or Documents, create: <strong>Claude Cowork</strong></p></div></div>
+  <div class="si"><div class="snum">2</div><div class="sc"><h4>Create subfolders inside it</h4><p><strong>ABOUT ME</strong> — your context files<br><strong>OUTPUTS</strong> — Claude saves all work here<br><strong>TEMPLATES</strong> — reusable prompts you build over time</p></div></div>
+  <div class="si"><div class="snum">3</div><div class="sc"><h4>Download Claude desktop app</h4><p>Go to <strong>claude.com/download</strong>. Install it. This unlocks Cowork Mode.</p></div></div>
+  <div class="si"><div class="snum">4</div><div class="sc"><h4>Open Cowork → New Task → Select folder</h4><p>Claude is now connected to your workspace and can see all files inside it.</p></div></div>
+  <div class="si"><div class="snum">5</div><div class="sc"><h4>Select model: Opus 4.6 + Extended Thinking</h4><p>Use the dropdown. Extended Thinking = Claude reasons step-by-step before answering.</p></div></div>
+</div>
+
+<div class="editor">
+  <div class="editor-hdr"><div class="editor-fn">Folder structure</div></div>
+  <div class="editor-body"><span class="mh">📁 Claude Cowork/</span>
+<span class="mb">├──</span> <span class="mh2">📁 ABOUT ME/</span>          <span class="cm">← your context files live here</span>
+<span class="mb">│   ├──</span> about-me.md          <span class="cm">← who you are, how you work</span>
+<span class="mb">│   ├──</span> claude.md            <span class="cm">← standing orders for every session</span>
+<span class="mb">│   └──</span> anti-ai.md           <span class="cm">← writing patterns to avoid</span>
+<span class="mb">├──</span> <span class="mh2">📁 OUTPUTS/</span>           <span class="cm">← Claude saves all work here</span>
+└── <span class="mh2">📁 TEMPLATES/</span>         <span class="cm">← reusable prompts and examples</span></div>
+</div>
+
+<p>Run this every time you start a new Cowork session:</p>
+<div class="code" style="position:relative"><button class="cbtn" onclick="cp(this)">Copy</button>Read every file in the ABOUT ME folder. Tell me what you know about me and what instructions you'll follow. If anything is unclear, ask me.</div>
+
+<h2>04-04 · Exercise: Create Your Folder Now</h2>
+<ul class="checklist">
+  <li><span class="chkbox" onclick="chk(this)"></span>Created <strong>Claude Cowork</strong> folder on Desktop or Documents</li>
+  <li><span class="chkbox" onclick="chk(this)"></span>Created <strong>ABOUT ME</strong> subfolder inside it</li>
+  <li><span class="chkbox" onclick="chk(this)"></span>Created <strong>OUTPUTS</strong> subfolder inside it</li>
+  <li><span class="chkbox" onclick="chk(this)"></span>Created <strong>TEMPLATES</strong> subfolder inside it</li>
+  <li><span class="chkbox" onclick="chk(this)"></span>Downloaded Claude desktop app from claude.com/download</li>
+  <li><span class="chkbox" onclick="chk(this)"></span>Opened Cowork Mode, selected the Claude Cowork folder</li>
+</ul>
+
+<div class="navbtn"><button class="btn btn-s" onclick="go(2)">← Back</button><button class="btn btn-p" onclick="go(4)">Next: Context Files →</button></div>
+</section>
+
+<!-- ========== SECTION 4: CONTEXT FILES (11 slides) ========== -->
+<section class="section" id="s4">
+<span class="section-tag"><span class="tag-num">5</span> Context Files · 11 slides</span>
+<h1>The Files That Make<br>Claude <span class="a2">Actually Yours</span></h1>
+<p class="lead">Write these once. Use them forever. This is the difference between "generic AI output" and "this sounds exactly like my work."</p>
+
+<h2>05-02 · Why Context Files Matter</h2>
+<div class="cmp">
+  <div class="ccard bad"><div class="clabel">Without context files</div><ul class="hl"><li>"Who are you?" → Claude doesn't know</li><li>"Who are you writing to?" → Claude doesn't know</li><li>"What's your style?" → Claude guesses</li><li>"What's happened before?" → Claude doesn't know</li></ul></div>
+  <div class="ccard good"><div class="clabel">With context files</div><ul class="hl"><li>Claude knows your role, company, audience</li><li>Claude knows your writing style and preferences</li><li>Claude knows your past decisions and guidelines</li><li>Claude knows your common tasks and templates</li></ul></div>
+</div>
+<div class="focus">Context files are a "briefing document" you hand to Claude at the start of every conversation. Write them once. Use them forever.</div>
+
+<h2>05-03 · The 4 Essential Context Files</h2>
+<div class="card-grid">
+  <div class="card" style="border-left:3px solid var(--accent)"><div class="card-title">about-me.md<span class="badge key">Most important</span></div><p>Who you are, your role, your communication style, your preferences. Like a personal briefing document.</p></div>
+  <div class="card" style="border-left:3px solid var(--accent2)"><div class="card-title">my-company.md</div><p>What your company does, your brand voice, your services, your typical clients. The organizational context.</p></div>
+  <div class="card" style="border-left:3px solid var(--accent3)"><div class="card-title">writing-rules.md</div><p>Your writing guidelines: tone, formatting rules, words to use and avoid, style preferences.</p></div>
+  <div class="card" style="border-left:3px solid var(--accent4)"><div class="card-title">decision-rules.md</div><p>Past decisions, common scenarios, rules of thumb. "If X happens, we do Y." Prevents repeated mistakes.</p></div>
+</div>
+<p style="font-size:12.5px;color:var(--text-dim)">Start with one file. Add more as you discover what Claude keeps getting wrong about you.</p>
+
+<h2>05-04 · Template: about-me.md</h2>
+<div class="editor">
+  <div class="editor-hdr"><div class="editor-fn">about-me.md</div></div>
+  <div class="editor-body"><span class="mh"># About Me</span>
+
+<span class="mh2">## My Role</span>
+Senior Account Manager at [Company]
+
+<span class="mh2">## My Communication Style</span>
+<span class="mb">-</span> Direct but warm
+<span class="mb">-</span> Prefer bullet points over paragraphs
+<span class="mb">-</span> Use "we" not "I" whenever possible
+<span class="mb">-</span> Avoid jargon — plain language
+
+<span class="mh2">## My Preferences</span>
+<span class="mb">-</span> I review everything before sending
+<span class="mb">-</span> I prefer options, not single recommendations
+<span class="mb">-</span> Flag risks and concerns before benefits
+
+<span class="mh2">## What I Value</span>
+<span class="mb">-</span> Clarity over cleverness
+<span class="mb">-</span> Specificity over generalization
+<span class="mb">-</span> Actionable over theoretical
+
+<span class="mh2">## Instructions for Claude</span>
+<span class="mb">1.</span> Read this file before starting any task
+<span class="mb">2.</span> Ask me clarifying questions before executing
+<span class="mb">3.</span> Save all outputs to OUTPUTS/ folder</div>
+</div>
+
+<div class="callout tip"><span class="callout-ico">💡</span><div class="callout-body"><strong>Best way to create it:</strong> Let Claude interview you. Paste the interview prompt below into a new session. Claude asks 20 questions one at a time, then writes the file for you. Use voice dictation to answer faster.</div></div>
+
+<div class="code" style="position:relative;max-height:200px;overflow-y:auto;"><button class="cbtn" onclick="cp(this)">Copy</button>You are building my about-me.md file for my Cowork folder. This file will be read by Claude at the start of every session to help you work with me. It must be concise and high-signal.
+
+Interview me with 20 questions (one at a time). Cover:
+- WHO I AM: role, company, who I work with
+- HOW I WORK: tools, process, what "done" looks like
+- WHAT GOOD LOOKS LIKE: my standards, what I value
+- WHAT I HATE: patterns that annoy me, what Claude usually gets wrong
+- MY RULES: non-negotiables
+
+After the interview, compile everything into a condensed about-me.md under 2,000 tokens. Save it to my ABOUT ME/ folder.</div>
+
+<h2>05-05 · Template: my-company.md</h2>
+<div class="editor">
+  <div class="editor-hdr"><div class="editor-fn">my-company.md</div></div>
+  <div class="editor-body"><span class="mh"># My Company</span>
+
+<span class="mh2">## What We Do</span>
+<span class="mph">[Brief description of your company's products/services]</span>
+
+<span class="mh2">## Brand Voice</span>
+<span class="mb">-</span> Professional but approachable
+<span class="mb">-</span> Confident but not arrogant
+<span class="mb">-</span> Industry expertise without jargon
+
+<span class="mh2">## Our Clients</span>
+<span class="mph">[Describe your typical clients — industry, size, needs]</span>
+
+<span class="mh2">## Our Services</span>
+<span class="mph">[List your key services]</span>
+
+<span class="mh2">## Common Projects</span>
+<span class="mph">[Describe the types of projects you typically work on]</span></div>
+</div>
+
+<h2>05-06 · Template: writing-rules.md</h2>
+<div class="editor">
+  <div class="editor-hdr"><div class="editor-fn">writing-rules.md</div></div>
+  <div class="editor-body"><span class="mh"># Writing Rules</span>
+
+<span class="mh2">## General</span>
+<span class="mb">-</span> Use active voice ("We recommend..." not "It is recommended...")
+<span class="mb">-</span> Keep sentences under 25 words where possible
+<span class="mb">-</span> One idea per paragraph
+
+<span class="mh2">## Words to Avoid</span>
+<span class="mb">-</span> "Leverage" → Use "use" instead
+<span class="mb">-</span> "Synergy" → Use "partnership" or "collaboration"
+<span class="mb">-</span> "Best-in-class" → Show don't claim
+
+<span class="mh2">## Formatting</span>
+<span class="mb">-</span> Use bullet points for lists of 3 or more
+<span class="mb">-</span> Bold for emphasis, not decoration
+<span class="mb">-</span> Headlines: sentence case, not title case</div>
+</div>
+
+<h2>05-07 · Template: decision-rules.md</h2>
+<div class="editor">
+  <div class="editor-hdr"><div class="editor-fn">decision-rules.md</div></div>
+  <div class="editor-body"><span class="mh"># Decision Rules</span>
+
+<span class="mh2">## Pricing Questions</span>
+<span class="mb">-</span> Never share pricing without a proposal
+<span class="mb">-</span> Always flag discount requests for manager approval
+
+<span class="mh2">## Client Communication</span>
+<span class="mb">-</span> Always address concerns within 24 hours
+<span class="mb">-</span> Copy account manager on all escalation emails
+<span class="mb">-</span> Use client's preferred communication channel
+
+<span class="mh2">## Content Approval</span>
+<span class="mb">-</span> Social posts: team lead approval, 24-hour turnaround
+<span class="mb">-</span> Blog posts: content lead + legal review
+<span class="mb">-</span> Client deliverables: project lead sign-off only</div>
+</div>
+
+<h2>05-08 · What Is claude.md? <span class="badge key">Special file</span></h2>
+<p>claude.md is a special file Claude reads automatically when it enters your project folder. Think of it as "global instructions" — things you want Claude to know every single session, without being asked.</p>
+<div class="cmp">
+  <div class="ccard good"><div class="clabel">✓ What goes in claude.md</div><ul class="hl"><li>Project-level context (the big picture)</li><li>Key conventions and rules</li><li>Links to your other context files</li><li>Starting instructions for every session</li></ul></div>
+  <div class="ccard bad"><div class="clabel">✗ What does NOT go in claude.md</div><ul class="hl"><li>Task-specific details (those go in your prompt)</li><li>Sensitive information (no secrets here)</li><li>One-time instructions</li></ul></div>
+</div>
+<div class="focus">claude.md is your project's "permanent briefing." Write it once, and Claude consults it on every task.</div>
+
+<div class="editor">
+  <div class="editor-hdr"><div class="editor-fn">claude.md</div></div>
+  <div class="editor-body"><span class="mh"># Claude Instructions</span>
+
+<span class="mh2">## Always do this</span>
+<span class="mb">-</span> Read all files in ABOUT ME/ before starting any task
+<span class="mb">-</span> Ask me clarifying questions BEFORE executing
+<span class="mb">-</span> Save all outputs to the OUTPUTS/ folder
+<span class="mb">-</span> Use my writing style from about-me.md at all times
+<span class="mb">-</span> When something is unclear, ask — don't guess
+
+<span class="mh2">## Never do this</span>
+<span class="mb">-</span> Don't start executing without asking questions first
+<span class="mb">-</span> Don't use corporate jargon (see anti-ai.md)
+<span class="mb">-</span> Don't assume — always verify ambiguous instructions
+<span class="mb">-</span> Don't pad responses with filler sentences
+
+<span class="mh2">## My workspace context</span>
+<span class="mph">[Brief description of what you work on, your team, clients]</span></div>
+</div>
+
+<h2>05-09 · How Context Files Grow Over Time</h2>
+<table class="dt">
+  <thead><tr><th>Timeline</th><th>What to do</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Week 1</strong></td><td>Start small: about-me.md + claude.md + anti-ai.md. Nothing else needed.</td></tr>
+    <tr><td><strong>Month 1</strong></td><td>Add a rule whenever Claude makes the same mistake twice. Create a template for any recurring task.</td></tr>
+    <tr><td><strong>Month 3</strong></td><td>Remove outdated content. Merge related files. Share templates with your team.</td></tr>
+  </tbody>
+</table>
+<div class="focus">Context files are living documents. The best time to write a new rule is immediately after Claude makes the same mistake twice.</div>
+
+<h2>05-10 · Before vs. After: The Context Difference</h2>
+<p>Scenario: "Write a response to a client who's concerned about timeline delays."</p>
+<div class="cmp">
+  <div class="ccard bad">
+    <div class="clabel">❌ Without context files</div>
+    <div class="code" style="margin:0;font-size:11px;">"Dear [Client], Thank you for your concern about the timeline. We understand delays can be frustrating. We are working hard to get things back on track."</div>
+    <p style="margin-top:8px;font-size:12px;">→ Generic. Vague. Sounds like every other agency email.</p>
+  </div>
+  <div class="ccard good">
+    <div class="clabel">✓ With context files (about-me + my-company + writing-rules)</div>
+    <div class="code" style="margin:0;font-size:11px;">"Hi Sarah, Thanks for flagging the timeline concern — it's completely valid and I appreciate you raising it. Here's where we stand: [specific update]. We'll have a revised timeline to you by Friday. Does that work?"</div>
+    <p style="margin-top:8px;font-size:12px;">→ Specific. On-brand. Personal. Actionable.</p>
+  </div>
+</div>
+
+<h2>05-11 · Exercise: Write Your First Context File</h2>
+<ul class="checklist">
+  <li><span class="chkbox" onclick="chk(this)"></span>Wrote <strong>about-me.md</strong> — ran the interview prompt or wrote manually from the template</li>
+  <li><span class="chkbox" onclick="chk(this)"></span>Created <strong>claude.md</strong> — standing instructions Claude follows every session</li>
+  <li><span class="chkbox" onclick="chk(this)"></span>Created <strong>anti-ai.md</strong> — your list of writing pet peeves (see Section 6)</li>
+  <li><span class="chkbox" onclick="chk(this)"></span>All files saved in the ABOUT ME/ folder</li>
+  <li><span class="chkbox" onclick="chk(this)"></span>Tested with "read my folder" prompt — Claude confirmed it understands</li>
+</ul>
+
+<div class="navbtn"><button class="btn btn-s" onclick="go(3)">← Back</button><button class="btn btn-p" onclick="go(5)">Next: Cowork Mode →</button></div>
+</section>
+
+<!-- ========== SECTION 5: COWORK MODE (10 slides) ========== -->
+<section class="section" id="s5">
+<span class="section-tag"><span class="tag-num">6</span> Cowork Mode · 10 slides</span>
+<h1>Claude Becomes a<br><span class="a3">Real Teammate</span></h1>
+<p class="lead">Cowork Mode is where Claude transforms from a chatbot into a collaborator. The single biggest productivity jump you'll experience.</p>
+
+<h2>06-02 · What Changes in Cowork Mode</h2>
+<div class="cmp">
+  <div class="ccard bad"><div class="clabel">Chat mode</div><ul class="hl"><li>Claude can only talk to you</li><li>No access to your files</li><li>No memory of past conversations</li><li>Everything must be typed manually</li></ul></div>
+  <div class="ccard good"><div class="clabel">Cowork mode</div><ul class="hl"><li>Claude sees your entire project folder</li><li>Reads any file you point it to</li><li>Creates and edits files directly</li><li>Works WITH you, not just responding to you</li></ul></div>
+</div>
+<div class="focus">Cowork Mode is where Claude transforms from a chatbot into a collaborator. It's the single biggest productivity jump you'll experience.</div>
+
+<h2>06-03 · How Cowork Mode Works</h2>
+<div class="card-grid">
+  <div class="card"><div class="card-title"><div class="ci" style="background:rgba(91,143,255,.15)">📖</div>Read</div><p>Opens and reads any file in your project folder. Instantly knows your context, drafts, and reference materials — no copy-paste needed.</p></div>
+  <div class="card"><div class="card-title"><div class="ci" style="background:rgba(52,211,153,.15)">✍️</div>Write</div><p>Creates new files and edits existing ones. Writes drafts, updates documents, organizes your work directly to disk.</p></div>
+  <div class="card"><div class="card-title"><div class="ci" style="background:rgba(167,139,250,.15)">🧠</div>Think</div><p>Reasons through problems step by step. Uses AskUserQuestion to ask YOU clarifying questions before executing.</p></div>
+  <div class="card"><div class="card-title"><div class="ci" style="background:rgba(251,146,60,.15)">🔍</div>Search</div><p>Searches through your files for specific information. No more manual Ctrl+F through long documents.</p></div>
+</div>
+<div class="callout tip"><span class="callout-ico">💡</span><div class="callout-body"><strong>You are always in control.</strong> Claude only does what you ask it to. The difference is it now works from your actual files — so it works from facts, not guesses about what you might mean.</div></div>
+
+<h2>06-04 · The "Read Before Write" Principle</h2>
+<p>A simple rule: before asking Claude to write or change anything, first ask it to read and understand. Prevents hallucinations and wrong assumptions.</p>
+<div class="steps">
+  <div class="si"><div class="snum">1</div><div class="sc"><h4>Read</h4><p>"Read this document and tell me what it's about."</p></div></div>
+  <div class="si"><div class="snum">2</div><div class="sc"><h4>Write</h4><p>"Now update the timeline section based on the new dates."</p></div></div>
+  <div class="si"><div class="snum">3</div><div class="sc"><h4>Verify</h4><p>"Show me exactly what you changed."</p></div></div>
+</div>
+<div class="focus">Read first. Write second. Verify third. This three-step rhythm will save you hours of fixing mistakes.</div>
+
+<h2>06-05 · What Claude Can (and Cannot) Do in Cowork</h2>
+<div class="cmp">
+  <div class="ccard good"><div class="clabel">✓ Claude CAN</div><ul class="hl"><li>Read and analyze your files</li><li>Write and edit documents</li><li>Create new files from templates</li><li>Search through your project folder</li><li>Make suggestions and recommendations</li><li>Track changes across versions</li></ul></div>
+  <div class="ccard bad"><div class="clabel">✗ Claude CANNOT</div><ul class="hl"><li>Access files outside your selected folder</li><li>Remember things from other sessions (without Projects)</li><li>Make decisions for you — you're always in charge</li><li>Send emails or messages on your behalf</li><li>Browse the internet without a web tool</li><li>Execute code without your approval</li></ul></div>
+</div>
+
+<h2>06-06 · First Safe Tasks to Try in Cowork</h2>
+<ul class="hl">
+  <li><strong>Read your context files</strong> — "Read my about-me.md and tell me what you understand about me."</li>
+  <li><strong>Create a document</strong> — "Create a meeting-notes-template.md in my project folder."</li>
+  <li><strong>Edit a document</strong> — "Add these three bullet points to the project notes."</li>
+  <li><strong>Ask about your project</strong> — "What files do I have in my project folder?"</li>
+  <li><strong>Draft something</strong> — "Draft a status update email using the info in my project notes."</li>
+  <li><strong>Review your work</strong> — "Read this document and suggest concrete improvements."</li>
+</ul>
+<div class="focus">Start with reading and drafting. Move to editing once you're comfortable. You're always in control.</div>
+
+<h2>06-07 · When to Use Chat vs When to Use Cowork</h2>
+<div class="cmp">
+  <div class="ccard" style="border-color:var(--border)"><div class="clabel" style="color:var(--accent)">Use CHAT when</div><ul class="hl"><li>Quick questions and brainstorming</li><li>Drafting short content (social posts, quick emails)</li><li>Learning about a new topic</li><li>Getting a second opinion on something</li></ul></div>
+  <div class="ccard" style="border-color:var(--border)"><div class="clabel" style="color:var(--accent3)">Use COWORK when</div><ul class="hl"><li>Working on an actual document or project</li><li>Reading and analyzing your files</li><li>Making edits to existing work</li><li>Any task that needs your context files</li></ul></div>
+</div>
+<div class="focus">Think of Chat as asking a colleague a question. Cowork is sitting down with them to work on a document together.</div>
+
+<h2>06-08 · Cowork: Recurring Example</h2>
+<p>Let's see how Cowork changes our meeting-to-email scenario:</p>
+<div class="steps">
+  <div class="si"><div class="snum">1</div><div class="sc"><h4>"Read my meeting-notes.md in the ABOUT ME folder."</h4><p>→ Claude reads your notes instantly. No copy-paste needed.</p></div></div>
+  <div class="si"><div class="snum">2</div><div class="sc"><h4>"Using my writing-rules.md and about-me.md, draft a meeting summary."</h4><p>→ Claude combines your context files + notes. Creates a formatted document.</p></div></div>
+  <div class="si"><div class="snum">3</div><div class="sc"><h4>"Draft the follow-up email to Sarah and save it as acme-followup.md."</h4><p>→ Claude writes the email. Saves it to your OUTPUTS folder. You review and send.</p></div></div>
+</div>
+<p style="font-size:13px;color:var(--text-dim)">Total time: ~5 minutes. Everything saved to your project folder. Zero copy-paste.</p>
+
+<h2>06-09 · Cowork Projects: Persistent Memory</h2>
+<p>The old Cowork forgot everything between sessions. <strong>Cowork Projects</strong> fixes this — persistent memory, custom instructions, task history.</p>
+<div class="card-grid">
+  <div class="card"><div class="card-title"><div class="ci" style="background:rgba(91,143,255,.15)">💾</div>Scoped memory</div><p>Claude remembers what it did inside this project. "Build on last week's report" — it knows what that was.</p></div>
+  <div class="card"><div class="card-title"><div class="ci" style="background:rgba(52,211,153,.15)">📋</div>Custom instructions</div><p>Your rules and tone baked in. Every task inside this project follows them automatically.</p></div>
+  <div class="card"><div class="card-title"><div class="ci" style="background:rgba(167,139,250,.15)">📚</div>Task history</div><p>Every run stored. Go back and see what Claude did, when, and the exact output produced.</p></div>
+</div>
+<p><strong>Create your first Cowork Project:</strong> Open Claude desktop → Cowork tab → Projects → + → "Use an existing folder" → Select your Claude Cowork folder → Add custom instructions (paste from claude.md)</p>
+<div class="code" style="position:relative"><button class="cbtn" onclick="cp(this)">Copy</button>I just created this Project. Read every file in the folder. Summarize what you know about this workspace: what's here, what I probably use it for, and what instructions you'll follow. If something is unclear, ask me.</div>
+
+<h2>06-10 · Cowork Mode Check-In</h2>
+<div class="callout info"><span class="callout-ico">✏️</span><div class="callout-body"><strong>Reflect (2 min):</strong><br>• What felt easy about Cowork Mode?<br>• What felt unfamiliar?<br>• What task would you try first in your real work?<br><br><strong>Key takeaway:</strong> Cowork Mode isn't a different tool — it's the same Claude with more abilities. You already know how to prompt. Now Claude can also read, write, and organize.</div></div>
+
+<h2>06-09 · Your Full Setup — Done ✓</h2>
+<div class="outcome-grid">
+  <div class="oc"><span class="oc-ico">📁</span><div class="oc-title">Folder structure</div><div class="oc-desc">Claude Cowork / ABOUT ME / OUTPUTS / TEMPLATES</div></div>
+  <div class="oc"><span class="oc-ico">📄</span><div class="oc-title">claude.md</div><div class="oc-desc">Standing orders every session follows automatically</div></div>
+  <div class="oc"><span class="oc-ico">👤</span><div class="oc-title">about-me.md</div><div class="oc-desc">Who you are, how you work, your rules for Claude</div></div>
+  <div class="oc"><span class="oc-ico">🚫</span><div class="oc-title">anti-ai.md</div><div class="oc-desc">What makes your work sound generic — Claude avoids it all</div></div>
+  <div class="oc"><span class="oc-ico">🗂️</span><div class="oc-title">Cowork Project</div><div class="oc-desc">Persistent memory, custom instructions, task history</div></div>
+</div>
+<div class="focus">That's it. You've done what most Claude users never do. Claude now knows who you are, how you work, and what you expect — every session.</div>
+
+<div class="navbtn"><button class="btn btn-s" onclick="go(4)">← Back</button><button class="btn btn-p" onclick="go(6)">Next: Building the Habit →</button></div>
+</section>
+
+<!-- ========== SECTION 6: BUILDING THE HABIT (9 slides) ========== -->
+<section class="section" id="s6">
+<span class="section-tag"><span class="tag-num">7</span> Building the Habit · 9 slides</span>
+<h1>From Trying It<br>to <span class="a4">Using It Daily</span></h1>
+<p class="lead">The habit is simple. The discipline is the hard part. Here's exactly how to build it — and what to do when things go wrong.</p>
+
+<h2>07-02 · The Iteration Loop</h2>
+<div class="card-grid">
+  <div class="card" style="border-left:3px solid var(--accent)"><div class="card-title">1. Ask</div><p>Write a clear prompt using your framework. Context + Task + Format at minimum.</p></div>
+  <div class="card" style="border-left:3px solid var(--accent2)"><div class="card-title">2. Review</div><p>Read Claude's output critically. Actually read it. Don't accept the first draft without reading it.</p></div>
+  <div class="card" style="border-left:3px solid var(--accent3)"><div class="card-title">3. Refine</div><p>Tell Claude what to change. Don't rewrite it yourself — tell Claude to fix it.</p></div>
+  <div class="card" style="border-left:3px solid var(--accent4)"><div class="card-title">4. Repeat</div><p>2–3 rounds of refinement is normal. First draft is always a starting point, never a finished product.</p></div>
+</div>
+<div class="focus">Good work with AI is iterative. The first response is a starting point, not a finished product. Plan for 2–3 rounds.</div>
+
+<h2>07-03 · When Claude Gets It Wrong (And Why)</h2>
+<table class="dt">
+  <thead><tr><th>What went wrong</th><th>Why it happened</th><th>The fix</th></tr></thead>
+  <tbody>
+    <tr><td>Generic, vague output</td><td>Not enough context</td><td>Add background, audience, specific situation</td></tr>
+    <tr><td>Wrong assumptions</td><td>Missing decision rules</td><td>Add a rule to your context files</td></tr>
+    <tr><td>Outdated information</td><td>Claude's knowledge has a cutoff date</td><td>Provide current info directly in your prompt</td></tr>
+    <tr><td>Invented facts (hallucination)</td><td>Claude filled gaps with patterns</td><td>Always verify facts, names, numbers independently</td></tr>
+    <tr><td>Misinterpreted task</td><td>Instructions were ambiguous</td><td>Be more specific; give a concrete example</td></tr>
+  </tbody>
+</table>
+<div class="focus">When Claude gets it wrong, 90% of the time the fix is in the prompt — not the model. What did you leave out?</div>
+
+<h2>07-04 · Troubleshooting: Prompt Issues</h2>
+<table class="dt">
+  <thead><tr><th>Problem</th><th>Likely cause</th><th>Fix</th></tr></thead>
+  <tbody>
+    <tr><td>Output is generic</td><td>No context</td><td>Add background, audience, specific situation</td></tr>
+    <tr><td>Output too long / too short</td><td>No length constraint</td><td>Specify word count or "2–3 sentences max"</td></tr>
+    <tr><td>Wrong tone</td><td>No tone guidance</td><td>Give examples + describe the voice explicitly</td></tr>
+    <tr><td>Missing key information</td><td>Task too vague</td><td>Break into specific sub-tasks</td></tr>
+    <tr><td>Off-topic tangents</td><td>No boundaries set</td><td>Add "Don't include X" or "Focus only on Y"</td></tr>
+  </tbody>
+</table>
+<div class="focus">If the output isn't what you wanted, add what's missing to your prompt. One sentence of clarification can change everything.</div>
+
+<h2>07-05 · Troubleshooting: Context Issues</h2>
+<table class="dt">
+  <thead><tr><th>Problem</th><th>Likely cause</th><th>Fix</th></tr></thead>
+  <tbody>
+    <tr><td>Claude ignores context files</td><td>Files not in project folder</td><td>Check files are in ABOUT ME/ folder</td></tr>
+    <tr><td>Claude forgot earlier instruction</td><td>Context window too full</td><td>Start fresh conversation with key context</td></tr>
+    <tr><td>Output doesn't match your voice</td><td>No writing rules or anti-ai.md</td><td>Create or update your writing rules file</td></tr>
+    <tr><td>Claude says "they" for your company</td><td>Missing rule in context files</td><td>Add "Always say 'we', never 'they'" to claude.md</td></tr>
+    <tr><td>Claude doesn't know your client</td><td>No client context</td><td>Add client notes to your context files</td></tr>
+  </tbody>
+</table>
+
+<h2>07-06 · Troubleshooting: Mode &amp; Model Issues</h2>
+<table class="dt">
+  <thead><tr><th>Problem</th><th>Likely cause</th><th>Fix</th></tr></thead>
+  <tbody>
+    <tr><td>Response too slow</td><td>Using Opus for simple tasks</td><td>Switch to Sonnet for everyday work</td></tr>
+    <tr><td>Response lacks depth</td><td>Using Haiku for complex tasks</td><td>Switch to Opus + Extended Thinking</td></tr>
+    <tr><td>Can't create files</td><td>In Chat mode, not Cowork</td><td>Switch to Cowork Mode</td></tr>
+    <tr><td>Claude can't see your files</td><td>Wrong folder selected</td><td>Check you opened the right project folder</td></tr>
+    <tr><td>Claude says "I can't do that"</td><td>Capability not available in this mode</td><td>Check if task needs Cowork mode</td></tr>
+  </tbody>
+</table>
+<div class="focus">When something doesn't work, first check: am I in the right mode? Chat can't write files. Cowork can't browse the web. Use the right tool.</div>
+
+<h2>07-07 · When to Start a New Conversation</h2>
+<div class="cmp">
+  <div class="ccard good"><div class="clabel">Start fresh when</div><ul class="hl"><li>Claude keeps repeating itself</li><li>You switched to a completely different topic</li><li>Conversation is very long (100+ messages)</li><li>Claude's responses are getting worse over time</li></ul></div>
+  <div class="ccard bad"><div class="clabel">Keep going when</div><ul class="hl"><li>You're still iterating on the same task</li><li>Good context is already established</li><li>The conversation is still productive</li></ul></div>
+</div>
+<div class="focus">Fresh conversations aren't failure — they're like clearing a whiteboard for a new problem. Smart users start fresh often.</div>
+
+<h2>07-08 · Troubleshooting Scenarios</h2>
+<div class="scenario"><div class="scenario-label">Scenario 1</div><p>You asked Claude to "write a proposal" and got back something that sounds like every other agency. What's the most likely fix?</p></div>
+<div class="scenario"><div class="scenario-label">Scenario 2</div><p>Claude keeps referring to your company as "they" instead of "we." How do you fix that <em>permanently</em>?</p></div>
+<div class="scenario"><div class="scenario-label">Scenario 3</div><p>You're 50 messages into a client project conversation and now need to draft something for a completely different client. What do you do?</p></div>
+<div class="callout info"><span class="callout-ico">💬</span><div class="callout-body">Discuss with a partner or write your answers. Then we'll review together.<br><br><strong>Answers:</strong> (1) Add context: about-me.md + company voice + a real example. (2) Add rule to claude.md and anti-ai.md permanently. (3) Start a completely fresh conversation — different client = different context.</div></div>
+
+<h2>07-09 · Building the Habit: Your 5 Key Habits</h2>
+<ul class="checklist">
+  <li><span class="chkbox" onclick="chk(this)"></span>Write prompts with context: Role, Context, Task, Format — every single time</li>
+  <li><span class="chkbox" onclick="chk(this)"></span>Read and verify everything Claude produces before using or sending it</li>
+  <li><span class="chkbox" onclick="chk(this)"></span>Iterate — first draft is never final, expect and plan for 2–3 rounds</li>
+  <li><span class="chkbox" onclick="chk(this)"></span>Use Cowork Mode for any project work or file creation</li>
+  <li><span class="chkbox" onclick="chk(this)"></span>Start fresh conversations when switching tasks or topics</li>
+</ul>
+
+<div class="navbtn"><button class="btn btn-s" onclick="go(5)">← Back</button><button class="btn btn-p" onclick="go(7)">Next: Trust &amp; Judgment →</button></div>
+</section>
+
+<!-- ========== SECTION 7: TRUST & JUDGMENT (5 slides) ========== -->
+<section class="section" id="s7">
+<span class="section-tag"><span class="tag-num">8</span> Trust &amp; Judgment · 5 slides</span>
+<h1>Claude is Brilliant.<br><span class="a1">You're Responsible.</span></h1>
+<p class="lead">Claude makes you faster. Your judgment makes you good. This distinction is the most important thing in this entire training.</p>
+
+<h2>08-02 · Trust, But Always Verify</h2>
+<p>Claude is fluent, confident, and sometimes wrong. Verification isn't optional — it's the whole game.</p>
+<div class="cmp">
+  <div class="ccard bad">
+    <div class="clabel">❌ Dangerous</div>
+    <p style="font-size:13px;">"Write a migration script."<br><br>→ Runs without review. The script had a destructive operation that wasn't flagged. Disaster.</p>
+  </div>
+  <div class="ccard good">
+    <div class="clabel">✓ Smart</div>
+    <p style="font-size:13px;">"Write a migration script. Before you finish, check: Does it handle rollbacks? Does it preserve existing data? Flag any destructive operations."<br><br>→ Reviewed. Caught two issues. Safe.</p>
+  </div>
+</div>
+<div class="blockquote">Claude's output is a first draft from a brilliant but imperfect teammate. Always review before shipping, deploying, or sending.</div>
+<p><strong>What to verify:</strong> Facts &amp; numbers, factual correctness, security issues, appropriateness of tone, assumptions Claude made.</p>
+
+<h2>08-03 · Verification Checklist</h2>
+<p>Before you use anything Claude produces:</p>
+<ul class="checklist">
+  <li><span class="chkbox" onclick="chk(this)"></span><strong>Facts</strong> — Are names, dates, numbers, and statistics correct? Claude can and does hallucinate.</li>
+  <li><span class="chkbox" onclick="chk(this)"></span><strong>Tone</strong> — Does this sound like you and your company? Or does it sound like generic AI?</li>
+  <li><span class="chkbox" onclick="chk(this)"></span><strong>Assumptions</strong> — Did Claude assume something about your situation that isn't actually true?</li>
+  <li><span class="chkbox" onclick="chk(this)"></span><strong>Completeness</strong> — Does it cover everything you asked for? Is anything missing?</li>
+  <li><span class="chkbox" onclick="chk(this)"></span><strong>Accuracy</strong> — Is the content actually correct? Or does it merely sound correct?</li>
+  <li><span class="chkbox" onclick="chk(this)"></span><strong>Safety</strong> — Does it contain anything sensitive, speculative, or inappropriate for the audience?</li>
+</ul>
+<div class="focus">The faster Claude produces output, the more carefully you should review it. Speed doesn't mean accuracy.</div>
+
+<h2>08-04 · What NOT to Share With AI</h2>
+<div class="cmp">
+  <div class="ccard bad"><div class="clabel">❌ Never share</div><ul class="hl"><li>Passwords, API keys, or credentials</li><li>Personal private data (passport numbers, financial details)</li><li>Confidential business secrets or anything under NDA</li><li>Proprietary code or data without company approval</li></ul></div>
+  <div class="ccard good"><div class="clabel">✓ Generally OK</div><ul class="hl"><li>Meeting notes (without sensitive data)</li><li>Draft documents and public information</li><li>General project context</li><li>Writing samples and templates</li></ul></div>
+</div>
+<div class="callout warn"><span class="callout-ico">⚠️</span><div class="callout-body"><strong>Rule of thumb:</strong> Ask yourself — would I be comfortable sharing this with a contractor? If not, don't share it with AI.</div></div>
+
+<h2>08-05 · Your Judgment Is What Matters</h2>
+<div class="hero-box">
+  <h2 style="margin-top:0">The most important takeaway of this entire training:</h2>
+  <p style="font-size:15px;color:var(--text);margin:10px 0;">Claude is a tool — it doesn't replace your judgment.</p>
+  <ul class="hl" style="margin-top:12px">
+    <li>You are responsible for everything you produce using AI</li>
+    <li>You make the final call on what's right and what's ready</li>
+    <li>You catch the mistakes. You spot the gaps. You decide when it's done.</li>
+    <li>You choose what to share and what to keep private.</li>
+  </ul>
+  <p style="margin-top:14px;font-style:italic;color:var(--text-dim);font-size:14px;">Claude makes you faster. Your judgment makes you good.</p>
+  <div class="focus" style="margin-top:16px">AI is the pencil. You're the writer. The pencil doesn't write the book — you do.</div>
+</div>
+
+<div class="navbtn"><button class="btn btn-s" onclick="go(6)">← Back</button><button class="btn btn-p" onclick="go(8)">Next: Closing →</button></div>
+</section>
+
+<!-- ========== SECTION 8: CLOSING (4 slides) ========== -->
+<section class="section" id="s8">
+<span class="section-tag"><span class="tag-num">9</span> Closing · 4 slides</span>
+<h1>You Made It.<br><span class="a3">Now Start.</span></h1>
+<p class="lead">You now know more about using AI effectively than most people who use it every day. The rest is practice.</p>
+
+<h2>09-01 · What You've Learned</h2>
+<table class="dt">
+  <thead><tr><th>Part</th><th>Key takeaway</th></tr></thead>
+  <tbody>
+    <tr><td><strong>1 · Foundations</strong></td><td>AI is pattern-matching, not magic. Tokens, context windows, the delegation mindset.</td></tr>
+    <tr><td><strong>2 · The Landscape</strong></td><td>Claude is 6 tools. Chat + Cowork cover 95% of daily needs.</td></tr>
+    <tr><td><strong>3 · Prompting</strong></td><td>Role, Context, Task, Constraints, Format, Verify. Context is the most important part.</td></tr>
+    <tr><td><strong>4 · Your Folder</strong></td><td>Claude Cowork / ABOUT ME / OUTPUTS / TEMPLATES. 5 minutes of setup, saves hours.</td></tr>
+    <tr><td><strong>5 · Context Files</strong></td><td>about-me.md + claude.md + anti-ai.md. Write once, use forever.</td></tr>
+    <tr><td><strong>6 · Cowork Mode</strong></td><td>Claude reads, writes, edits files. Read before write. Projects = persistent memory.</td></tr>
+    <tr><td><strong>7 · The Habit</strong></td><td>Ask → Review → Refine → Repeat. Fix the prompt, not the model.</td></tr>
+    <tr><td><strong>8 · Trust &amp; Judgment</strong></td><td>Verify everything. Never share sensitive data. Your judgment is irreplaceable.</td></tr>
+  </tbody>
+</table>
+
+<h2>09-02 · Your First Real Task</h2>
+<div class="steps">
+  <div class="si"><div class="snum">1</div><div class="sc"><h4>Open Claude in Cowork Mode on your project folder</h4></div></div>
+  <div class="si"><div class="snum">2</div><div class="sc"><h4>Pick a real task from today's work</h4><p>Email, summary, status update, document draft — anything you'd normally spend 20+ minutes on.</p></div></div>
+  <div class="si"><div class="snum">3</div><div class="sc"><h4>Write a prompt using the framework</h4><p>Role, Context, Task, Constraints, Format.</p></div></div>
+  <div class="si"><div class="snum">4</div><div class="sc"><h4>Review Claude's output critically</h4></div></div>
+  <div class="si"><div class="snum">5</div><div class="sc"><h4>Make one round of refinements, then use it</h4></div></div>
+</div>
+<div class="focus">You don't need to master everything today. One good prompt is a win. Do it once — it becomes a habit.</div>
+
+<h2>09-03 · Next Steps &amp; Resources</h2>
+<div class="card-grid">
+  <div class="card"><div class="card-title">🧪 Practice daily</div><p>Use Claude for at least one real task every day for the next two weeks. The habit compounds fast.</p></div>
+  <div class="card"><div class="card-title">📝 Add rules</div><p>Every time Claude gets something wrong — add a rule to anti-ai.md or claude.md immediately.</p></div>
+  <div class="card"><div class="card-title">🔗 Connect tools</div><p>Settings → Connectors. Add Slack, Google Drive, Notion. Claude reads your actual tools.</p></div>
+  <div class="card"><div class="card-title">👥 Share with team</div><p>Share useful prompts and context files. A shared template library benefits everyone.</p></div>
+</div>
+<div class="hero-box" style="margin-top:20px">
+  <p><strong>Resources:</strong></p>
+  <ul class="hl" style="margin-top:8px">
+    <li><strong>claude.ai</strong> — Chat mode for quick tasks</li>
+    <li><strong>claude.com/download</strong> — Desktop app for Cowork Mode</li>
+    <li><strong>docs.claude.ai</strong> — Official documentation and prompt engineering guide</li>
+    <li><strong>Your team lead</strong> — For questions and support</li>
+  </ul>
+</div>
+
+<h2>09-04 · Congratulations</h2>
+<div class="hero-box">
+  <h2 style="margin-top:0">You Made It</h2>
+  <p style="font-size:15px;color:var(--text)">Congratulations on completing the training.</p>
+  <p style="margin-top:10px">You now know more about using AI effectively than most people who use it every day. The rest is practice. Every prompt you write, every output you review, every context file you create — that's where the skill builds.</p>
+  <p style="margin-top:10px">You've got everything you need to start. The only thing left is to begin.</p>
+  <div class="focus" style="margin-top:16px">The best time to start using AI well was six months ago. The second best time is right now.</div>
+</div>
+
+<div class="navbtn"><button class="btn btn-s" onclick="go(7)">← Back</button><button class="btn btn-p" onclick="go(9)">Appendix: Prompt Patterns →</button></div>
+</section>
+
+<!-- ========== SECTION 9: PROMPT PATTERNS APPENDIX ========== -->
+<section class="section" id="s9">
+<span class="section-tag"><span class="tag-num">A</span> Appendix · Prompt Patterns</span>
+<h1>Advanced<br><span class="a2">Prompt Patterns</span></h1>
+<p class="lead">Once you're comfortable with the basics, these patterns unlock more precise and powerful outputs.</p>
+
+<h2>A-01 · Model Selection Quick Guide</h2>
+<table class="dt">
+  <thead><tr><th>Model</th><th>Best for</th><th>Speed</th><th>Think of it as</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Haiku 4.5</strong></td><td>Quick tasks, drafts, simple Q&A</td><td>Fastest</td><td>Your quick assistant</td></tr>
+    <tr><td><strong>Sonnet 4.6</strong></td><td>Everyday work, writing, analysis</td><td>Fast</td><td>Your main collaborator</td></tr>
+    <tr><td><strong>Opus 4.6</strong></td><td>Complex analysis, strategy, hard problems</td><td>Thoughtful</td><td>Your senior advisor</td></tr>
+    <tr><td><strong>+ Extended Thinking</strong></td><td>Math, logic, strategy — "show your work" tasks</td><td>Slower but better</td><td>Available on Opus</td></tr>
+  </tbody>
+</table>
+<div class="focus">Use the lightest model that does the job. Use Extended Thinking when you want Claude to reason through the problem before answering.</div>
+
+<h2>A-02 · Extended Thinking: When Claude "Thinks"</h2>
+<p>Extended Thinking mode makes Claude reason step-by-step before answering. You see the reasoning process. Better for complex problems.</p>
+<div class="card-grid">
+  <div class="card"><div class="card-title">When to use</div><p>Complex analysis, strategic decisions, debugging, anything where "show your work" matters.</p></div>
+  <div class="card"><div class="card-title">When to skip</div><p>Simple drafts, quick questions, routine tasks — regular mode is faster and equally good.</p></div>
+  <div class="card"><div class="card-title">What you get</div><p>Visible reasoning process. Makes hidden assumptions easier to catch. More reliable on hard problems.</p></div>
+</div>
+
+<h2>A-03 · Prompt Pattern: Role Prompting</h2>
+<p>Give Claude a specific persona to adopt. Fundamentally changes the lens of every response.</p>
+<div class="code" style="position:relative"><button class="cbtn" onclick="cp(this)">Copy</button>"You are a [role] with expertise in [area]. You communicate in [style]."
+
+<span class="cm">Examples:</span>
+<span class="val">- "You are a senior UX writer who specializes in clear, jargon-free error messages."</span>
+<span class="val">- "You are a financial analyst explaining complex concepts to beginners."</span>
+<span class="val">- "You are a project manager who writes concise, action-oriented status updates."</span></div>
+<div class="callout tip"><span class="callout-ico">💡</span><div class="callout-body">Role setting narrows Claude's output space dramatically. A "senior UX writer" produces very different text than a "product manager" given the exact same task.</div></div>
+
+<h2>A-04 · Prompt Pattern: Chain of Thought</h2>
+<p>Ask Claude to reason step by step before answering. Makes hidden assumptions visible. Easier to catch errors.</p>
+<div class="code" style="position:relative"><button class="cbtn" onclick="cp(this)">Copy</button>"Before you answer, work through this step by step."
+
+<span class="cm">Examples:</span>
+<span class="val">- "Before recommending a solution, list the pros and cons of each option."</span>
+<span class="val">- "First, analyze what's missing from this document. Then suggest what to add."</span>
+<span class="val">- "Think about what could go wrong with this plan before helping me refine it."</span></div>
+
+<h2>A-05 · Prompt Pattern: Persona + Constraint</h2>
+<p>Combine role with specific hard limits for precise, bounded output.</p>
+<div class="code" style="position:relative"><button class="cbtn" onclick="cp(this)">Copy</button>"You are a [role]. You MUST [do X]. You must NOT [do Y]."
+
+<span class="cm">Examples:</span>
+<span class="val">- "You are a technical writer. You must use plain language. You must NOT use jargon or acronyms without explanation."</span>
+<span class="val">- "You are a customer support lead. You must acknowledge the customer's frustration. You must NOT promise solutions we can't deliver."</span></div>
+
+<h2>A-06 · Prompt Pattern: Format Constraint</h2>
+<p>Tell Claude exactly how to structure its response. Eliminates guesswork entirely.</p>
+<div class="code" style="position:relative"><button class="cbtn" onclick="cp(this)">Copy</button><span class="cm">Format instruction examples:</span>
+<span class="val">- "Respond as a table: Option | Pros | Cons | Recommendation"</span>
+<span class="val">- "Bullets only. No paragraphs. Each bullet under 15 words."</span>
+<span class="val">- "Give me 3 options. For each: 2-sentence summary, effort level, risk."</span>
+<span class="val">- "Write as a memo: TO, FROM, DATE, SUBJECT, then 4 sections."</span></div>
+
+<h2>A-07 · More Context File Tips</h2>
+<ul class="hl">
+  <li><strong>Keep files focused</strong> — One topic per file. Don't dump everything into about-me.md.</li>
+  <li><strong>Use plain markdown (.md)</strong> — Claude reads it cleanly. No Word docs in the context folder.</li>
+  <li><strong>Set a quarterly reminder</strong> — Review and update context files every 3 months.</li>
+  <li><strong>Add real examples</strong> — A "good email / bad email" example is worth more than any description.</li>
+  <li><strong>Share with your team</strong> — A shared template library benefits everyone and compounds over time.</li>
+  <li><strong>Trim when it gets long</strong> — If about-me.md exceeds 2,000 words, ask Claude to help you condense it.</li>
+</ul>
+
+<h2>A-08 · Building a Template Library</h2>
+<div class="steps">
+  <div class="si"><div class="snum">1</div><div class="sc"><h4>Find a task you do at least weekly</h4><p>Meeting recap, client email, status update, project brief, weekly report.</p></div></div>
+  <div class="si"><div class="snum">2</div><div class="sc"><h4>Write the best prompt you can for it</h4><p>Use all 6 parts of the framework.</p></div></div>
+  <div class="si"><div class="snum">3</div><div class="sc"><h4>Replace specific content with [PLACEHOLDERS]</h4><p>Remove names, dates, and details.</p></div></div>
+  <div class="si"><div class="snum">4</div><div class="sc"><h4>Save to TEMPLATES/ folder</h4><p>Name it clearly: "meeting-recap.md", "client-email.md"</p></div></div>
+</div>
+<div class="code" style="position:relative"><button class="cbtn" onclick="cp(this)">Copy</button><span class="cm"># Template: meeting-recap.md</span>
+
+Task: Summarize this meeting.
+Format: Key decisions → Action items (with owner) → Open questions
+Tone: Brief, factual, no filler
+Include: Who attended, what was decided, what happens next
+
+Context: [PASTE MEETING NOTES HERE]</div>
+
+<h2>A-09 · Bonus: What Are Skills?</h2>
+<p>Skills are packaged prompt workflows that Claude can run automatically — like "super templates" for complex recurring tasks.</p>
+<div class="card-grid">
+  <div class="card"><div class="card-title">What it is</div><p>A SKILL.md file in a folder that defines what Claude does, when to use it, and the step-by-step process.</p></div>
+  <div class="card"><div class="card-title">When to use</div><p>Once you're comfortable with prompting and Cowork. Skills are for tasks you run 2–3x per week with a consistent structure.</p></div>
+  <div class="card"><div class="card-title">Examples</div><p>Meeting recap generation, client email drafting, project status updates, research summarization.</p></div>
+</div>
+<div class="callout info"><span class="callout-ico">💡</span><div class="callout-body">Skills are more advanced. Get comfortable with basic Cowork first. Come back to Skills once you've built the habit.</div></div>
+
+<h2>A-10 · What Makes a Good Skill</h2>
+<ul class="hl">
+  <li><strong>Specific</strong> — Does one thing well, not everything vaguely</li>
+  <li><strong>Reusable</strong> — You use it at least once a week</li>
+  <li><strong>Structured</strong> — Clear steps, not a wall of text</li>
+  <li><strong>Tested</strong> — You've run it 3+ times and refined it</li>
+  <li><strong>Shared</strong> — Your team can use it too</li>
+</ul>
+
+<div class="navbtn"><button class="btn btn-s" onclick="go(8)">← Back</button><button class="btn btn-p" onclick="go(10)">Appendix: Practice &amp; Quick Ref →</button></div>
+</section>
+
+<!-- ========== SECTION 10: PRACTICE & QUICK REFERENCE ========== -->
+<section class="section" id="s10">
+<span class="section-tag"><span class="tag-num">B</span> Appendix · Practice &amp; Quick Reference</span>
+<h1>Practice &amp; <span class="a3">Quick Reference</span></h1>
+<p class="lead">Extra exercises, cheat sheets, and everything you need in one place.</p>
+
+<h2>A-12 · More Troubleshooting Tips</h2>
+<table class="dt">
+  <thead><tr><th>Symptom</th><th>Check</th><th>Fix</th></tr></thead>
+  <tbody>
+    <tr><td>Claude is repetitive</td><td>Context window too full</td><td>Start fresh conversation</td></tr>
+    <tr><td>Claude ignores instructions</td><td>Prompt is too long</td><td>Put key instructions first and last (Claude pays most attention to beginning and end)</td></tr>
+    <tr><td>Claude is too formal</td><td>No tone guidance</td><td>Add "Write like a human, not a corporation" to your prompt or anti-ai.md</td></tr>
+    <tr><td>Claude says "I don't have enough info"</td><td>Missing context</td><td>Add more specific details about the situation</td></tr>
+    <tr><td>Output is too long</td><td>No length constraint</td><td>Add "Keep this under [X words/sentences]"</td></tr>
+  </tbody>
+</table>
+
+<h2>A-13 · Extra Practice: Meeting Recap</h2>
+<div class="scenario">
+  <div class="scenario-label">Exercise</div>
+  <p>You attended a 30-minute project check-in. Key points: Budget approved for Q3 campaign. Timeline moved up 2 weeks (deadline: June 15). Client requested weekly check-ins. Two new stakeholders added: Sarah (Finance) and Mike (Creative).</p>
+</div>
+<div class="callout info"><span class="callout-ico">✏️</span><div class="callout-body"><strong>Your task:</strong> Write a prompt that produces a complete meeting recap with: summary, key decisions, action items, and next meeting date. Write the prompt before reading below.<br><br><strong>Example answer:</strong> Role: You're a project coordinator attending a Q3 campaign check-in. Context: [paste notes]. Task: Write a full meeting recap. Format: Summary (3 bullets) → Decisions (numbered list with owners) → Action items (due dates) → Next steps. Constraints: Under 300 words. Flag any action items that don't have a clear owner.</div></div>
+
+<h2>A-14 · Extra Practice: Client Communication</h2>
+<div class="scenario">
+  <div class="scenario-label">Exercise</div>
+  <p>A client emailed asking why a deliverable is late. The delay is due to a third-party vendor who provided incomplete assets. The relationship is 2 years old. The client has been patient but this is the second delay this quarter.</p>
+</div>
+<div class="callout info"><span class="callout-ico">✏️</span><div class="callout-body"><strong>Your prompt should produce a response that:</strong><br>• Acknowledges the delay honestly<br>• Explains the cause without sounding like an excuse<br>• Provides a new timeline with some buffer<br>• Rebuilds confidence<br>• Uses your company's professional-but-warm voice (reference your writing-rules.md)</div></div>
+
+<h2>A-15 · Extra Practice: Research &amp; Summary</h2>
+<div class="scenario">
+  <div class="scenario-label">Exercise</div>
+  <p>You have a 20-page industry report. You need to: (1) extract the 5 most important findings, (2) explain each in 1–2 sentences, (3) note implications for your company, (4) suggest 3 potential actions.</p>
+</div>
+<div class="callout info"><span class="callout-ico">✏️</span><div class="callout-body"><strong>Write a single prompt that accomplishes all 4 goals.</strong> Hint: Include the format you want, how long each section should be, and a verification step to flag anything uncertain or that requires further research.</div></div>
+
+<h2>A-16 · Resources &amp; Links</h2>
+<div class="card-grid">
+  <div class="card"><div class="card-title">🌐 claude.ai</div><p>Chat mode — quick tasks, brainstorming, summaries. Free plan available.</p></div>
+  <div class="card"><div class="card-title">💻 claude.com/download</div><p>Desktop app — Cowork Mode, Projects, file work.</p></div>
+  <div class="card"><div class="card-title">💰 claude.com/pricing</div><p>Free, Pro ($20/mo), Max ($100–200/mo).</p></div>
+  <div class="card"><div class="card-title">📖 docs.claude.ai</div><p>Official documentation and prompt engineering guide.</p></div>
+</div>
+<div class="callout tip"><span class="callout-ico">💡</span><div class="callout-body"><strong>Practice plan:</strong> Use Claude for at least one real task every day for the next 14 days. By day 14 it will feel as natural as email. Try rewriting one weak prompt per day. Share one useful prompt with a teammate each week.</div></div>
+
+<h2>A-17 · Common Terms Reference</h2>
+<table class="dt">
+  <thead><tr><th>Term</th><th>What it means</th></tr></thead>
+  <tbody>
+    <tr><td><strong>AI</strong></td><td>Computer systems that can perform tasks requiring human-like intelligence</td></tr>
+    <tr><td><strong>LLM</strong></td><td>A model trained on vast text data to understand and generate language</td></tr>
+    <tr><td><strong>Token</strong></td><td>~¾ of a word — the unit AI reads and writes in</td></tr>
+    <tr><td><strong>Context Window</strong></td><td>How much text AI can process at once (Claude: ~200K tokens)</td></tr>
+    <tr><td><strong>Prompt</strong></td><td>Your instruction to the AI</td></tr>
+    <tr><td><strong>Output</strong></td><td>What the AI returns in response</td></tr>
+    <tr><td><strong>Hallucination</strong></td><td>AI confidently stating something incorrect</td></tr>
+    <tr><td><strong>Sycophancy</strong></td><td>AI tendency to agree even when the user is wrong</td></tr>
+    <tr><td><strong>Model</strong></td><td>A specific AI version (Haiku, Sonnet, Opus)</td></tr>
+    <tr><td><strong>Fine-tuning</strong></td><td>Customizing AI for a specific use case</td></tr>
+    <tr><td><strong>Cowork Mode</strong></td><td>Claude desktop app that reads/writes files on your computer</td></tr>
+    <tr><td><strong>Extended Thinking</strong></td><td>Mode where Claude reasons step by step before answering</td></tr>
+    <tr><td><strong>AskUserQuestion</strong></td><td>Cowork feature where Claude asks you questions before executing a task</td></tr>
+  </tbody>
+</table>
+
+<h2>A-18 · Quick Reference Card</h2>
+<div class="editor">
+  <div class="editor-hdr"><div class="editor-fn">prompt-framework.md — bookmark this</div></div>
+  <div class="editor-body"><span class="mh"># The 6-Part Prompt Framework</span>
+
+<span class="mh2">Role</span>        → "You are a [role] who [expertise]"
+<span class="mh2">Context</span>     → "Here's what you need to know: [background, audience, situation]"
+<span class="mh2">Task</span>        → "Do this: [specific instruction]"
+<span class="mh2">Constraints</span> → "Stay within: [length, tone, avoid X]"
+<span class="mh2">Format</span>      → "Structure your response like: [format description]"
+<span class="mh2">Verify</span>      → "Before finishing, check: [verification criteria]"
+
+<span class="cm">─────────────────────────────────────────</span>
+Always: Read first. Ask second. Verify third.
+If stuck: Add context.
+If repeated mistake: Start fresh + update context files.
+If wrong: Be more specific. Give an example.
+If too generic: Add your context files to the prompt.</div>
+</div>
+
+<h2>A-19 · Prompt Cheat Sheet by Task</h2>
+<table class="dt">
+  <thead><tr><th>Task</th><th>Template</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Summarize</strong></td><td>"Summarize this in [X] bullet points. Include key decisions, open questions, and action items."</td></tr>
+    <tr><td><strong>Draft</strong></td><td>"Draft a [document type] for [audience]. The goal is [outcome]. Use a [tone] tone."</td></tr>
+    <tr><td><strong>Edit</strong></td><td>"Review this for [clarity/tone/completeness]. Suggest specific changes. Explain why."</td></tr>
+    <tr><td><strong>Brainstorm</strong></td><td>"Generate [X] ideas for [goal]. For each: one-sentence summary, effort level, potential impact."</td></tr>
+    <tr><td><strong>Compare</strong></td><td>"Compare [A] and [B] across [criteria]. Present as a table with a recommendation."</td></tr>
+    <tr><td><strong>Research</strong></td><td>"Summarize the key arguments for and against [topic]. Flag anything uncertain."</td></tr>
+    <tr><td><strong>Status update</strong></td><td>"Write a status update for [project]: progress this week, blockers, next steps. Under 200 words."</td></tr>
+  </tbody>
+</table>
+
+<h2>A-20 · What's Next for AI</h2>
+<div class="hero-box">
+  <p><strong>The AI landscape is moving fast. Here's what's coming:</strong></p>
+  <div class="cmp" style="margin-top:14px">
+    <div class="ccard" style="border-color:var(--border)">
+      <div class="clabel" style="color:var(--accent)">Near-term (6–12 months)</div>
+      <ul class="hl"><li>Better integration with tools you already use</li><li>AI agents that run multi-step workflows</li><li>Improved accuracy, fewer hallucinations</li><li>More specialized models for specific industries</li></ul>
+    </div>
+    <div class="ccard" style="border-color:var(--border)">
+      <div class="clabel" style="color:var(--accent3)">What stays the same</div>
+      <ul class="hl"><li>Your judgment is still what matters most</li><li>Context and clarity will always improve output</li><li>Verification will always be necessary</li><li>The human in the loop is irreplaceable</li></ul>
+    </div>
+  </div>
+  <div class="focus" style="margin-top:16px">The tools will evolve. The skill of working with AI — context, clarity, judgment — will only become more valuable.</div>
+</div>
+
+<div class="navbtn"><button class="btn btn-s" onclick="go(9)">← Back</button><button class="btn btn-g" onclick="go(0)">↩ Start from beginning</button></div>
+</section>
+
+</main>
+</div>
