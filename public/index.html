@@ -144,12 +144,11 @@ ul.hl li::before{content:'→';color:var(--accent);flex-shrink:0;font-family:'DM
   <div class="sb-item" onclick="go(15)" id="n15"><span class="sbn">16</span>Building the Habit</div>
   <div class="sb-item" onclick="go(16)" id="n16"><span class="sbn">17</span>Trust &amp; Judgment</div>
   <div class="sb-item" onclick="go(17)" id="n17"><span class="sbn">18</span>Closing &amp; Next Steps</div>
-  <div class="sb-group">Appendix</div>
+  <div class="sb-item" onclick="go(20)" id="n20"><span class="sbn">19</span>TL;DR &amp; Takeaways</div>
+	  <div class="sb-group">Appendix</div>
   <div class="sb-item" onclick="go(18)" id="n18"><span class="sbn">A</span>Prompt Patterns</div>
   <div class="sb-item" onclick="go(19)" id="n19"><span class="sbn">B</span>Practice &amp; Quick Ref</div>
-  <div class="sb-group">TL;DR</div>
-  <div class="sb-item" onclick="go(20)" id="n20"><span class="sbn">C</span>TL;DR &amp; Takeaways</div>
-</nav>
+  </nav>
 <main class="content-area" id="ca">
 
 <!-- ========== AI LITERACY 1: WHAT AI IS ========== -->
@@ -1606,7 +1605,7 @@ Return: 1. Issues found (grouped by severity P0/P1/P2), 2. Assessment (which fla
   <div class="focus" style="margin-top:16px">The best time to start using AI well was six months ago. The second best time is right now.</div>
 </div>
 
-<div class="navbtn"><button class="btn btn-s" onclick="go(16)">← Back</button><button class="btn btn-p" onclick="go(18)">Appendix: Prompt Patterns →</button></div>
+<div class="navbtn"><button class="btn btn-s" onclick="go(16)">← Back</button><button class="btn btn-p" onclick="go(20)">TL;DR &amp; Takeaways →</button></div>
 </section>
 
 <!-- ========== SECTION 9: PROMPT PATTERNS APPENDIX ========== -->
@@ -1715,12 +1714,12 @@ Context: [PASTE MEETING NOTES HERE]</div>
 </ul>
 
 <div class="navbtn"><button class="btn btn-s" onclick="go(17)">← Back</button><button class="btn btn-p" onclick="go(19)">Appendix: Practice &amp; Quick Ref →</button></div>
-</section>
+  </nav></section>
 
 <!-- ========== SECTION 10: PRACTICE & QUICK REFERENCE ========== -->
 <section class="section" id="s19">
 <span class="section-tag"><span class="tag-num">B</span> Appendix · Practice &amp; Quick Reference</span>
-<h1>Practice &amp; <span class="a3">Quick Reference</span></h1>
+  </nav><h1>Practice &amp; <span class="a3">Quick Reference</span></h1>
 <p class="lead">Extra exercises, cheat sheets, and everything you need in one place.</p>
 
 <h2>A-12 · More Troubleshooting Tips</h2>
@@ -1835,15 +1834,10 @@ If too generic: Add your context files to the prompt.</div>
   <div class="focus" style="margin-top:16px">The tools will evolve. The skill of working with AI, context, clarity, judgment, will only become more valuable.</div>
 </div>
 
-<div class="navbtn"><button class="btn btn-s" onclick="go(18)">← Back</button><button class="btn btn-p" onclick="go(20)">TL;DR: Takeaways →</button></div>
-</section>
-
 <!-- ========== TL;DR: ACTIONABLE TAKEAWAYS ========== -->
 <section class="section" id="s20">
-<span class="section-tag"><span class="tag-num">C</span> TL;DR · Takeaways</span>
+<span class="section-tag"><span class="tag-num">19</span> TL;DR · Takeaways</span>
 <h1>TL;DR: <span class="a3">Just Tell Me What to Do</span></h1>
-<p class="lead">You don't need to remember everything. These 6 actions, in priority order, will get you 90% of the value.</p>
-
 <div class="card-grid">
   <div class="card" style="border-left:3px solid var(--accent)">
     <div class="card-title"><span style="background:var(--accent);color:var(--bg);border-radius:50%;width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;">1</span> Create your project folder</div>
@@ -1902,7 +1896,7 @@ If too generic: Add your context files to the prompt.</div>
 
 <div class="focus">You now know more about using AI effectively than most daily users. The gap between knowing and doing is one folder, one file, one prompt. Start today.</div>
 
-<div class="navbtn"><button class="btn btn-s" onclick="go(19)">← Back</button><button class="btn btn-g" onclick="go(0)">↩ Start from beginning</button></div>
+<div class="navbtn"><button class="btn btn-s" onclick="go(17)">← Back</button><button class="btn btn-p" onclick="go(18)">Appendix: Prompt Patterns →</button></div>
 </section>
 
 </main>
@@ -1921,7 +1915,7 @@ function go(i){
   const ne=document.getElementById('n'+cur);
   ne.classList.add('active');ne.classList.remove('done');
   const as=ne.querySelector('.sbn');
-  if(as&&as.textContent==='✓'){const lb=['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','A','B','C'];as.textContent=lb[cur];}
+  if(as&&as.textContent==='✓'){const lb=['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','A','B','19'];as.textContent=lb[cur];}
   const pct=Math.round((cur/(total-1))*100);
   document.getElementById('pf').style.width=pct+'%';
   document.getElementById('pt').textContent=(cur+1)+' / '+total;
