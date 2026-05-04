@@ -1,4 +1,4 @@
-let cur=0;const total=11;
+let cur=0;const total=28;
 function go(i){
   document.getElementById('s'+cur).classList.remove('active');
   const pn=document.getElementById('n'+cur);
@@ -10,7 +10,7 @@ function go(i){
   const ne=document.getElementById('n'+cur);
   ne.classList.add('active');ne.classList.remove('done');
   const as=ne.querySelector('.sbn');
-  if(as&&as.textContent==='✓'){const lb=['1','2','3','4','5','6','7','8','9','A','B'];as.textContent=lb[cur];}
+  if(as&&as.textContent==='✓'){const lb=['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','A','B','20','15a','15b','15c','15d','15e','C'];as.textContent=lb[cur];}
   const pct=Math.round((cur/(total-1))*100);
   document.getElementById('pf').style.width=pct+'%';
   document.getElementById('pt').textContent=(cur+1)+' / '+total;
